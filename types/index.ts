@@ -28,3 +28,5 @@ export interface StateBudget {
       backgroundColor: string[];
     }[];
   }
+  
+  

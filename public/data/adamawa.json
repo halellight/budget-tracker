@@ -1,0 +1,26 @@
+{
+  "name": "Adamawa State",
+  "code": "ADAMAWA",
+  "capital": "Yola",
+  "region": "North-East",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 225893690626,
+      "recurrentExpenditure": 111379586126,
+      "capitalExpenditure": 114514104500,
+      "sectorAllocations": {
+        "education": 15603000100,
+        "health": 6388000000,
+        "infrastructure": 25535000000,
+        "agriculture": 4505511000
+      },
+      "revenue": {
+        "igr": 22240608550,
+        "faac": 141617082076,
+        "grants": 4900000000,
+        "loans": 16000000000
+      }
+    }
+  ]
+}
