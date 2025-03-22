@@ -4,17 +4,16 @@ import type React from "react"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import type { StateData } from "@/types/budget"
 import SampleData from "./sample-data"
+import { FileUpload } from "@/components/file-upload"
 
 export default function UploadPage() {
   const [stateData, setStateData] = useState<StateData | null>(null)
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0]
+  const handleFileUpload = (file: File | null) => {
     if (file) {
       const reader = new FileReader()
       reader.onload = (e) => {
@@ -73,8 +72,8 @@ export default function UploadPage() {
           <CardTitle>Upload JSON File</CardTitle>
         </CardHeader>
         <CardContent>
-          <Input type="file" accept=".json" onChange={handleFileUpload} className="mb-4" />
-          <div className="flex flex-col gap-2 mb-4">
+          <FileUpload onChange={handleFileUpload} accept=".json" />
+          <div className="flex flex-col gap-2 mb-4 mt-4">
             <p className="text-sm text-muted-foreground">
               Upload a JSON file with state budget data. The file should contain state information and budget details.
             </p>
