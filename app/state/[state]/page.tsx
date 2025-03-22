@@ -89,7 +89,7 @@ export default async function StatePage({ params }: { params: { state: string } 
         </Card>
       </div>
 
-      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
+      
 
       <div className="mt-8">
         <Tabs defaultValue="sectors" className="mb-8">
@@ -151,6 +151,8 @@ export default async function StatePage({ params }: { params: { state: string } 
           </TabsContent>
         </Tabs>
       </div>
+
+      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
 
       <div className="mt-8">
         <BudgetGlossary />
