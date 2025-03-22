@@ -1,0 +1,29 @@
+{
+    "name": "Enugu State",
+    "code": "ENUGU",
+    "capital": "Enugu",
+    "region": "South-East",
+    "currentGovernor": "Peter Ndubuisi Mbah",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 521561386000,
+        "recurrentExpenditure": 372789000000,
+        "capitalExpenditure": 414334120000,
+        "sectorAllocations": {
+          "education": 132298743995,
+          "health": 78649302780,
+          "infrastructure": 175849217000,
+          "agriculture": 40275630000,
+          "security": 1150000000
+        },
+        "revenue": {
+          "igr": 252789000000,
+          "faac": 120000000000,
+          "grants": 34022386000,
+          "loans": 103750000000
+        }
+      }
+    ]
+  }
+  

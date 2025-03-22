@@ -1,49 +1,47 @@
 {
-    "name": "Abia State",
-    "code": "ABIA",
-    "capital": "Umuahia",
-    "region": "South-East",
-    "currentGovernor": "Alex Otti",
-    "budgets": [
-      {
-        "year": "2024",
-        "totalBudget": 567240095972,
-        "recurrentExpenditure": 91498547579,
-        "capitalExpenditure": 475741548393,
-        "sectorAllocations": {
-          "education": 100572702602,
-          "health": 77303726655,
-          "infrastructure": 89370777699,
-          "agriculture": 27602340000,
-          "security": 534400000
-        },
-        "revenue": {
-          "igr": 32143062000,
-          "faac": 133934655058,
-          "grants": 16491351701,
-          "loans": 50000000000
-        }
+  "name": "Abia State",
+  "code": "ABIA",
+  "capital": "Umuahia",
+  "region": "South-East",
+  "currentGovernor": "Alex Otti",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 567240095972,
+      "recurrentExpenditure": 91498547579,
+      "capitalExpenditure": 475741548393,
+      "sectorAllocations": {
+        "education": 100572702602,
+        "health": 77303726655,
+        "infrastructure": 89370777699,
+        "agriculture": 27602340000,
+        "security": 534400000
       },
-      {
-        "year": "2023",
-        "totalBudget": 160517504300,
-        "recurrentExpenditure": 74133863400,
-        "capitalExpenditure": 86383640900,
-        "sectorAllocations": {
-          "education": 102546396000,
-          "health": 68952673400,
-          "infrastructure": 72549000000,
-          "agriculture": 23500000000,
-          "security": 490000000
-        },
-        "revenue": {
-          "igr": 30923100700,
-          "faac": 73874663700,
-          "grants": 17790932700,
-          "loans": 55000000000
-        }
+      "revenue": {
+        "igr": 32143062000,
+        "faac": 133934655058,
+        "grants": 16491351701,
+        "loans": 50000000000
       }
-    ]
-  }
-  
-  
+    },
+    {
+      "year": "2023",
+      "totalBudget": 160517504300,
+      "recurrentExpenditure": 74133863400,
+      "capitalExpenditure": 86383640900,
+      "sectorAllocations": {
+        "education": 102546396000,
+        "health": 68952673400,
+        "infrastructure": 72549000000,
+        "agriculture": 23500000000,
+        "security": 490000000
+      },
+      "revenue": {
+        "igr": 30923100700,
+        "faac": 73874663700,
+        "grants": 17790932700,
+        "loans": 55000000000
+      }
+    }
+  ]
+}

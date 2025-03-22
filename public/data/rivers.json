@@ -1,0 +1,29 @@
+{
+    "name": "Rivers State",
+    "code": "RIVERS",
+    "capital": "Port Harcourt",
+    "region": "South-South",
+    "currentGovernor": "Siminalayi Fubara",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 793457700561,
+        "recurrentExpenditure": 514293143351,
+        "capitalExpenditure": 431859657990,
+        "sectorAllocations": {
+          "education": 159849573200,
+          "health": 97837261700,
+          "infrastructure": 203849217000,
+          "agriculture": 38275630000,
+          "security": 1420000000
+        },
+        "revenue": {
+          "igr": 231057836945,
+          "faac": 283235306406,
+          "grants": 12285000000,
+          "loans": 266879557210
+        }
+      }
+    ]
+  }
+  

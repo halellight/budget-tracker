@@ -5,16 +5,7 @@ import { StateData } from '@/types/budget'
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData()
-    const file = formData.get('file') as File
-
-    if (!file) {
-      return NextResponse.json({ error: 'No file uploaded' }, { status: 400 })
-    }
-
-    const buffer = Buffer.from(await file.arrayBuffer())
-    const data: StateData = JSON.parse(buffer.toString())
-
+    const data: StateData = await request.json()
     const dataDir = path.join(process.cwd(), 'public', 'data')
     const filePath = path.join(dataDir, `${data.code.toLowerCase()}.json`)
     

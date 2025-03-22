@@ -1,49 +1,44 @@
-import { StateBudget } from '@/types/budget'
+import type { StateBudget, StateData } from "@/types/budget"
+import fs from "fs/promises"
+import path from "path"
 
-const BASE_URL = process.env.OPENSTATES_API_BASE_URL || 'https://openstates.ng/api/v1'
-const API_KEY = process.env.OPENSTATES_API_KEY
-
-export async function fetchStateData(stateCode: string): Promise<StateData> {
-  const response = await fetch(`${BASE_URL}/states/${stateCode}`)
-  if (!response.ok) {
-    throw new Error('Failed to fetch state data')
-  }
-  return response.json()
-}
-
-export async function fetchAllStates(): Promise<StateData[]> {
-  const response = await fetch(`${BASE_URL}/states`)
-  if (!response.ok) {
-    throw new Error('Failed to fetch states')
-  }
-  return response.json()
-}
-
-export async function fetchStateBudgetData(state: string, datasetId: string): Promise<StateBudget> {
-  const url = `${BASE_URL}/${state}/dataset/${datasetId}`
-  
+// Get data for a specific state from the uploaded JSON files
+export async function getStateData(stateCode: string): Promise<StateData | null> {
   try {
-    const response = await fetch(url, {
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-    })
+    const filePath = path.join(process.cwd(), "public", "data", `${stateCode.toLowerCase()}.json`)
+    const fileContents = await fs.readFile(filePath, "utf8")
+    return JSON.parse(fileContents) as StateData
+  } catch (error) {
+    console.error(`Error reading file for state ${stateCode}:`, error)
+    return null
+  }
+}
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
+// Get a list of all available states from the uploaded JSON files
+export async function getAllStates(): Promise<string[]> {
+  try {
+    const dataDir = path.join(process.cwd(), "public", "data")
+    const files = await fs.readdir(dataDir)
+    return files.filter((file) => file.endsWith(".json")).map((file) => file.replace(".json", ""))
+  } catch (error) {
+    console.error("Error reading data directory:", error)
+    return []
+  }
+}
+
+// Get budget data for a specific state
+export async function fetchStateBudgetData(state: string): Promise<StateBudget | null> {
+  try {
+    const stateData = await getStateData(state)
+    if (!stateData || !stateData.budgets || stateData.budgets.length === 0) {
+      return null
     }
 
-    const data = await response.json()
-    return data as StateBudget
+    // Return the most recent budget
+    return stateData.budgets[stateData.budgets.length - 1]
   } catch (error) {
-    console.error('Error fetching state budget data:', error)
-    throw error
+    console.error("Error fetching state budget data:", error)
+    return null
   }
-}
-
-export const stateDatasetIds: Record<string, string> = {
-  'adamawa': '1551',
-  // Add other state dataset IDs here
 }
 

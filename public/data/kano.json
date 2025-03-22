@@ -1,0 +1,29 @@
+{
+    "name": "Kano State",
+    "code": "KANO",
+    "capital": "Kano",
+    "region": "North-West",
+    "currentGovernor": "Abba Kabir Yusuf",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 421527326798,
+        "recurrentExpenditure": 379762289575,
+        "capitalExpenditure": 279835094304,
+        "sectorAllocations": {
+          "education": 159415719007,
+          "health": 67302712100,
+          "infrastructure": 108500000000,
+          "agriculture": 38296300000,
+          "security": 1260000000
+        },
+        "revenue": {
+          "igr": 101956874541,
+          "faac": 277805415034,
+          "grants": 16699855184,
+          "loans": 25065182039
+        }
+      }
+    ]
+  }
+  

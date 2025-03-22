@@ -34,10 +34,10 @@ export default function Home() {
                     {/* Right Column - Card */}
           <div className="w-full  mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
             <div className="relative max-w-lg mx-auto">
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-30"></div>
-              <Card className="relative bg-black/40 border-zinc-800/50 p-6 backdrop-blur-sm">
+              <div className="absolute -inset-1 rounded-2xl"></div>
+              <Card className="relative  border-zinc-800/50 p-6 backdrop-blur-sm">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="col-span-2 flex items-center justify-between bg-zinc-800/30 p-4 rounded-lg">
+                  <div className="col-span-2 flex items-center justify-between bg-black p-4 rounded-lg">
                     <div>
                       <p className="text-sm text-zinc-400">
                         Lagos State Budget 2024
@@ -46,12 +46,12 @@ export default function Home() {
                     </div>
                     <PieChart className="h-8 w-8 text-green-500" />
                   </div>
-                  <div className="bg-zinc-800/30 p-4 rounded-lg">
+                  <div className="bg-black p-4 rounded-lg">
                     <BarChart3 className="h-6 w-6 text-green-500 mb-2" />
                     <p className="text-sm text-zinc-400">Capital Expenditure</p>
                     <p className="text-lg font-semibold text-white">₦1.45T</p>
                   </div>
-                  <div className="bg-zinc-800/30 p-4 rounded-lg">
+                  <div className="bg-black p-4 rounded-lg">
                     <Building2 className="h-6 w-6 text-green-500 mb-2" />
                     <p className="text-sm text-zinc-400">
                       Recurrent Expenditure
@@ -75,7 +75,7 @@ export default function Home() {
               Explore budget data for key Nigerian states
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {['Lagos', 'Kano', 'Rivers'].map((state) => (
               <Link key={state} href={`/state/${state.toLowerCase()}`} className="block group">
                 <div className="relative bg-accent rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
@@ -89,7 +89,68 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div> */}
+          <section className="container mx-auto px-4 py-16">
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          {['Lagos', 'Kano', 'Rivers'].map((state) => (
+            <Link href={`/state/${state.toLowerCase()}`} key={state}>
+              <Card className="hover:bg-accent transition-colors overflow-hidden">
+                <img 
+                  src={`/states/${state.toLowerCase()}.jpg`} 
+                  alt={state} 
+                  className="w-full h-48 object-cover"
+                />
+                <CardHeader>
+                  <CardTitle>{state}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Explore {state} State's budget allocation and economic data
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-accent">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Why Track State Budgets?</h2>
+              <div className="space-y-4">
+                <p className="text-muted-foreground">
+                  Understanding how our states allocate resources is crucial for every Nigerian citizen. 
+                  Our platform provides easy-to-understand visualizations of budget data and commodity production.
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    ✓ Track government spending
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✓ Monitor development projects
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✓ Compare state performances
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✓ Make informed decisions
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="relative h-[400px]">
+              <img 
+                src="/infographic.jpg" 
+                alt="Budget tracking infographic" 
+                className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              />
+            </div>
           </div>
+        </div>
+      </section>
         </div>
       </div>
     </div>
