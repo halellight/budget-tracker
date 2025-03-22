@@ -13,6 +13,7 @@ export async function GET(request: Request, { params }: { params: { state: strin
 
     return NextResponse.json(data)
   } catch (error) {
+    console.error("Error fetching state data:", error)
     return NextResponse.json({ error: "Failed to fetch state data" }, { status: 500 })
   }
 }

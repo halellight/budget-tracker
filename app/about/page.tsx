@@ -18,7 +18,7 @@ export default function AboutPage() {
             <CardTitle>How We Work</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>We collect publicly available budget data from all 36 Nigerian states and present it in easy-to-understand charts and graphs. Our goal is to empower citizens with knowledge about how their state's resources are being allocated.</p>
+            <p>We collect publicly available budget data from all 36 Nigerian states and present it in easy-to-understand charts and graphs. Our goal is to empower citizens with knowledge about how their state&apos;s resources are being allocated.</p>
           </CardContent>
         </Card>
       </div>

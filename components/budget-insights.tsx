@@ -37,14 +37,14 @@ export function BudgetInsights({ budget, stateName }: BudgetInsightsProps) {
       <CardHeader>
         <CardTitle>Budget Insights</CardTitle>
         <CardDescription>
-          Key observations from {stateName} State's {budget.year} budget
+          Key observations from {stateName} State&apos;s {budget.year} budget
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="font-semibold text-lg">Budget Overview</h3>
           <p className="text-muted-foreground">
-            {stateName} State's total budget for {budget.year} is {formatCurrencyInWords(budget.totalBudget)}. This
+            {stateName} State&apos;s total budget for {budget.year} is {formatCurrencyInWords(budget.totalBudget)}. This
             budget{" "}
             {budgetStatus === "balanced"
               ? "is balanced"

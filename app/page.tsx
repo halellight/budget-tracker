@@ -4,10 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   PieChart,
   Building2,
-  ArrowUpRight,
+
   BarChart3,
-  MapPin,
-  CheckCircle,
+
 } from "lucide-react";
 
 export default function Home() {
@@ -106,7 +105,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Explore {state} State's budget allocation and economic data
+                    Explore {state} State&apos;s budget allocation and economic data
                   </p>
                 </CardContent>
               </Card>
