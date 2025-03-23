@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { getStateData } from '@/lib/api'
 
 export async function GET(
-  request: NextRequest,
+  request: Request,
   { params }: { params: { state: string } }
 ) {
   const state = params.state.toLowerCase()

@@ -33,7 +33,7 @@ export function StateHeader({ stateName, year, statePath }: StateHeaderProps) {
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">
-          <h1 className="text-4xl font-bold mb-2">{stateName} State</h1>
+          <h1 className="text-4xl font-bold mb-2">{stateName}</h1>
           <p className="text-lg">Budget Analysis {year}</p>
         </div>
       </div>

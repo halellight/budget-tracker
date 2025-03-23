@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark ${spaceGrotesk.variable}`}>
-      <body className="font-sans bg-background text-foreground min-h-screen flex flex-col">
+      <body className="font-sans bg-background text-foreground min-h-screen flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="border-b border-border">
           <nav className="container mx-auto px-4 py-4">
             <SiteHeader />
@@ -53,7 +53,7 @@ export default function RootLayout({
               </div>
               <div>
                 <h3 className="font-bold mb-2">Contact</h3>
-                <p className="text-muted-foreground">info@budgettrack.ng</p>
+                <p className="text-muted-foreground">praiseibec@gmail.com</p>
               </div>
             </div>
           </div>

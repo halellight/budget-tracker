@@ -1,20 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import Image from 'next/image'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  PieChart,
-  Building2,
-
-  BarChart3,
-
-} from "lucide-react";
+import { Card } from "@/components/ui/card"
+import { PieChart, BarChart3, Building2 } from "lucide-react"
 import { FeaturedStateCard } from "@/components/featured-state-card"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-foreground sm:text-5xl md:text-6xl">
@@ -66,104 +59,48 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-secondary py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
-              Featured States
-            </h2>
-            <p className="mt-4 text-xl text-muted-foreground">
-              Explore budget data for key Nigerian states
-            </p>
-          </div>
-          {/* <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {['Lagos', 'Kano', 'Rivers'].map((state) => (
-              <Link key={state} href={`/state/${state.toLowerCase()}`} className="block group">
-                <div className="relative bg-accent rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                  <div className="h-48 bg-primary flex items-center justify-center">
-                    <span className="text-4xl text-primary-foreground">{state[0]}</span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition duration-300 ease-in-out">{state}</h3>
-                    <p className="mt-2 text-muted-foreground">Explore {state} State's budget allocation and economic data</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div> */}
-          {/* <section className="container mx-auto px-4 py-16">
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {['Lagos', 'Kano', 'Rivers'].map((state) => (
-            <Link href={`/state/${state.toLowerCase()}`} key={state}>
-              <Card className="hover:bg-accent transition-colors overflow-hidden">
-                <img 
-                  src={`/states/${state.toLowerCase()}.jpg`} 
-                  alt={state} 
-                  className="w-full h-48 object-cover"
-                />
-                <CardHeader>
-                  <CardTitle>{state}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Explore {state} State&apos;s budget allocation and economic data
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </section> */}
-
-<section className="container mx-auto px-4 py-10 md:py-16">
+      <section className="container mx-auto px-4 py-10 md:py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Featured States</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {['Lagos', 'Kano', 'Rivers'].map((state) => (
+          {["Lagos", "Kano", "Rivers"].map((state) => (
             <FeaturedStateCard key={state} state={state} />
           ))}
         </div>
       </section>
 
-      <section className="bg-accent">
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+      <section className="">
+        <div className="container mx-auto px-4 py-10 md:py-16">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Why Track State Budgets?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Track State Budgets?</h2>
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  Understanding how our states allocate resources is crucial for every Nigerian citizen. 
-                  Our platform provides easy-to-understand visualizations of budget data and commodity production.
+                  Understanding how our states allocate resources is crucial for every Nigerian citizen. Our platform
+                  provides easy-to-understand visualizations of budget data and commodity production.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    ✓ Track government spending
-                  </li>
-                  <li className="flex items-center gap-2">
-                    ✓ Monitor development projects
-                  </li>
-                  <li className="flex items-center gap-2">
-                    ✓ Compare state performances
-                  </li>
-                  <li className="flex items-center gap-2">
-                    ✓ Make informed decisions
-                  </li>
+                  <li className="flex items-center gap-2">✓ Track government spending</li>
+                  <li className="flex items-center gap-2">✓ Monitor development projects</li>
+                  <li className="flex items-center gap-2">✓ Compare state performances</li>
+                  <li className="flex items-center gap-2">✓ Make informed decisions</li>
                 </ul>
               </div>
             </div>
-            <div className="relative h-[400px]">
-              <img 
-                src="/infographic.jpg" 
-                alt="Budget tracking infographic" 
+            <div className="relative h-[300px] md:h-[400px] mt-6 md:mt-0">
+              <img
+                src="/infographic.jpg"
+                style={{ objectFit: "cover" }}
+                alt="Budget tracking infographic"
                 className="absolute inset-0 w-full h-full object-cover rounded-lg"
               />
             </div>
           </div>
         </div>
       </section>
-        </div>
-      </div>
     </div>
   )
 }
+
+
+
 
