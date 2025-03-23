@@ -1,24 +1,35 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 interface StateHeaderProps {
-  stateName: string
-  year: string
-  statePath: string
+  stateName: string;
+  year: string;
+  statePath: string;
 }
 
 export function StateHeader({ stateName, year, statePath }: StateHeaderProps) {
   const [imageError, setImageError] = useState(false)
-
+  
   return (
     <div className="relative h-[300px] mb-8 rounded-lg overflow-hidden">
-      <img
-        src={imageError ? "/placeholder.svg?height=300&width=800" : `/states/${statePath}.jpg`}
-        alt={`${stateName} State`}
-        className="absolute inset-0 w-full h-full object-cover"
-        onError={() => setImageError(true)}
-      />
+      <div className="absolute inset-0 w-full h-full">
+        {imageError ? (
+          <div className="w-full h-full bg-accent flex items-center justify-center">
+            <span className="text-muted-foreground">{stateName} State</span>
+          </div>
+        ) : (
+          <Image 
+            src={`/states/${statePath}.jpg`}
+            alt={`${stateName} State`}
+            fill
+            className="object-cover"
+            onError={() => setImageError(true)}
+            priority
+          />
+        )}
+      </div>
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">
@@ -29,4 +40,3 @@ export function StateHeader({ stateName, year, statePath }: StateHeaderProps) {
     </div>
   )
 }
-

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   PieChart,
@@ -8,6 +9,7 @@ import {
   BarChart3,
 
 } from "lucide-react";
+import { FeaturedStateCard } from "@/components/featured-state-card"
 
 export default function Home() {
   return (
@@ -89,7 +91,7 @@ export default function Home() {
               </Link>
             ))}
           </div> */}
-          <section className="container mx-auto px-4 py-16">
+          {/* <section className="container mx-auto px-4 py-16">
         
         <div className="grid md:grid-cols-3 gap-6">
           {['Lagos', 'Kano', 'Rivers'].map((state) => (
@@ -110,6 +112,15 @@ export default function Home() {
                 </CardContent>
               </Card>
             </Link>
+          ))}
+        </div>
+      </section> */}
+
+<section className="container mx-auto px-4 py-10 md:py-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Featured States</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {['Lagos', 'Kano', 'Rivers'].map((state) => (
+            <FeaturedStateCard key={state} state={state} />
           ))}
         </div>
       </section>
