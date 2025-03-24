@@ -22,7 +22,7 @@ const chartColors = {
 }
 
 export default async function StatePage({ params }: { params: { state: string } }) {
-  // Use a local variable to avoid the params.state error
+
   const stateCode = params.state.toLowerCase()
   const stateData = await getStateData(stateCode)
 
