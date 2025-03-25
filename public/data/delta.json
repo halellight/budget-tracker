@@ -1,0 +1,28 @@
+{
+    "name": "Delta State",
+    "code": "DELTA",
+    "stateCode": 1552,
+    "capital": "Asaba",
+    "region": "South-South",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 724979313867,
+        "recurrentExpenditure": 316624462710,
+        "capitalExpenditure": 408354851156,
+        "sectorAllocations": {
+          "education": 16277250127,
+          "health": 1256959737,
+          "infrastructure": 152595494308,
+          "agriculture": 591217131
+        },
+        "revenue": {
+          "igr": 110304108619,
+          "faac": 564287080756,
+          "grants": 38388124492,
+          "loans": 2000000000
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,27 @@
+{
+  "name": "Lagos State",
+  "code": "LAGOS",
+  "stateCode": 1553,
+  "capital": "Ikeja",
+  "region": "South-West",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 2267976120869,
+      "recurrentExpenditure": 952430566997,
+      "capitalExpenditure": 1315545553871,
+      "sectorAllocations": {
+        "education": 17686669000,
+        "health": 42311246553,
+        "infrastructure": 209598918258,
+        "agriculture": 41673267401
+      },
+      "revenue": {
+        "igr": 1164618002093,
+        "faac": 596628500000,
+        "grants": 54476073845,
+        "loans": 427253544931
+      }
+    }
+  ]
+}

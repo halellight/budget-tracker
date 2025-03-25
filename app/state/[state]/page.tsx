@@ -21,8 +21,15 @@ const chartColors = {
   loans: "#9333EA",
 }
 
-export default async function StatePage({ params }: { params: { state: string } }) {
+// Define the correct type for params
+interface StatePageProps {
+  params: {
+    state: string
+  }
+}
 
+export default async function StatePage({ params }: StatePageProps) {
+  // Use a local variable to avoid the params.state error
   const stateCode = params.state.toLowerCase()
   const stateData = await getStateData(stateCode)
 
