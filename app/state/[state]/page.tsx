@@ -4,10 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { getStateData } from "@/lib/api"
 import { formatCurrency } from "@/lib/utils"
 import { formatCurrencyInWords } from "@/lib/number-to-words"
-import { BarChart } from "@/components/bar-chart"
+import { InteractiveBarChart } from "@/components/interactive-bar-chart"
 import { BudgetInsights } from "@/components/budget-insights"
 import { BudgetGlossary } from "@/components/budget-glossary"
 import { StateHeader } from "@/components/state-header"
+import { ChartInstruction } from "@/components/chart-instruction"
 
 const chartColors = {
   education: "#22C55E",
@@ -21,16 +22,10 @@ const chartColors = {
   loans: "#9333EA",
 }
 
-// Define the correct type for params
-interface StatePageProps {
-  params: {
-    state: string
-  }
-}
-
-export default async function StatePage({ params }: StatePageProps) {
-  // Use a local variable to avoid the params.state error
-  const stateCode = params.state.toLowerCase()
+// Remove all type annotations for the page component
+export default async function StatePage(props: any) {
+  // Extract state from params
+  const stateCode = props.params.state.toLowerCase()
   const stateData = await getStateData(stateCode)
 
   if (!stateData) {
@@ -96,7 +91,7 @@ export default async function StatePage({ params }: StatePageProps) {
         </Card>
       </div>
 
-      
+      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
 
       <div className="mt-8">
         <Tabs defaultValue="sectors" className="mb-8">
@@ -110,8 +105,9 @@ export default async function StatePage({ params }: StatePageProps) {
                 <CardTitle>Budget Allocation by Sector</CardTitle>
               </CardHeader>
               <CardContent>
+                <ChartInstruction />
                 <div className="h-[400px] mb-6">
-                  <BarChart data={sectorData} height={350} currencyFormatter={sectorCurrencyValues} />
+                  <InteractiveBarChart data={sectorData} height={350} currencyFormatter={sectorCurrencyValues} />
                 </div>
                 <div className="mt-4 grid gap-2">
                   {sectorData.map((item, index) => (
@@ -136,8 +132,9 @@ export default async function StatePage({ params }: StatePageProps) {
                 <CardTitle>Revenue Sources</CardTitle>
               </CardHeader>
               <CardContent>
+                <ChartInstruction />
                 <div className="h-[400px] mb-6">
-                  <BarChart data={revenueData} height={350} currencyFormatter={revenueCurrencyValues} />
+                  <InteractiveBarChart data={revenueData} height={350} currencyFormatter={revenueCurrencyValues} />
                 </div>
                 <div className="mt-4 grid gap-2">
                   {revenueData.map((item, index) => (
@@ -158,8 +155,6 @@ export default async function StatePage({ params }: StatePageProps) {
           </TabsContent>
         </Tabs>
       </div>
-
-      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
 
       <div className="mt-8">
         <BudgetGlossary />
