@@ -13,6 +13,31 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Nigerian Budget Tracker",
   description: "Track budget spending across Nigerian states",
+  metadataBase: new URL("https://ngtrak.netlify.app"),
+  openGraph: {
+    title: "Nigerian Budget Tracker",
+    description: "Track budget spending across Nigerian states",
+    url: "https://ngtrak.netlify.app",
+    siteName: "Nigerian Budget Tracker",
+    images: [
+      {
+        url: "https://opengraph.b-cdn.net/production/images/eaca33e9-e2ce-45cc-9ce1-a0cee4db9cb5.png?token=3c4CPi2s7blESZllXtFUI96bPacl8Ubi7cf_xWFJGis&height=458&width=1200&expires=33278934701",
+        width: 1200,
+        height: 630,
+        alt: "Nigerian Budget Tracker",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nigerian Budget Tracker",
+    description: "Track budget spending across Nigerian states",
+    images: [
+      "https://opengraph.b-cdn.net/production/images/eaca33e9-e2ce-45cc-9ce1-a0cee4db9cb5.png?token=3c4CPi2s7blESZllXtFUI96bPacl8Ubi7cf_xWFJGis&height=458&width=1200&expires=33278934701",
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -22,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark ${spaceGrotesk.variable}`}>
-      <body className="font-sans bg-background text-foreground min-h-screen flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <body className="font-sans bg-background text-foreground min-h-screen flex flex-col">
         <header className="border-b border-border">
           <nav className="container mx-auto px-4 py-4">
             <SiteHeader />
