@@ -17,9 +17,21 @@ export function InteractiveBarChart({ data, height = 300, currencyFormatter }: I
   const [mounted, setMounted] = useState(false)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    // Check if we're on mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+    }
   }, [])
 
   if (!mounted) {
@@ -30,6 +42,22 @@ export function InteractiveBarChart({ data, height = 300, currencyFormatter }: I
 
   const handleInteraction = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index)
+  }
+
+  // Format currency for display
+  const formatCurrencyForDisplay = (value: string) => {
+    if (isMobile) {
+      // On mobile, abbreviate large numbers
+      if (value.includes("billion")) {
+        return value.replace("billion", "B")
+      }
+      if (value.includes("million")) {
+        return value.replace("million", "M")
+      }
+      // Remove commas and shorten
+      return value.replace(/,/g, "").substring(0, 7) + "..."
+    }
+    return value
   }
 
   return (
@@ -66,9 +94,9 @@ export function InteractiveBarChart({ data, height = 300, currencyFormatter }: I
             </div>
             <div className="mt-2 text-xs text-center font-medium truncate w-full px-1">{item.label}</div>
             <div
-              className={`mt-1 text-xs ${activeIndex === index ? "text-primary font-medium" : "text-muted-foreground"}`}
+              className={`mt-1 text-xs ${activeIndex === index ? "text-primary font-medium" : "text-muted-foreground"} truncate w-full px-1`}
             >
-              {currencyFormatter[index]}
+              {formatCurrencyForDisplay(currencyFormatter[index])}
             </div>
           </div>
         ))}
