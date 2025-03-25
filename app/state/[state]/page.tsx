@@ -91,7 +91,7 @@ export default async function StatePage(props: any) {
         </Card>
       </div>
 
-      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
+      
 
       <div className="mt-8">
         <Tabs defaultValue="sectors" className="mb-8">
@@ -155,6 +155,8 @@ export default async function StatePage(props: any) {
           </TabsContent>
         </Tabs>
       </div>
+
+      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
 
       <div className="mt-8">
         <BudgetGlossary />
