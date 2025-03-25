@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Nigerian Budget Tracker",
     images: [
       {
-        url: "https://opengraph.b-cdn.net/production/images/eaca33e9-e2ce-45cc-9ce1-a0cee4db9cb5.png?token=3c4CPi2s7blESZllXtFUI96bPacl8Ubi7cf_xWFJGis&height=458&width=1200&expires=33278934701",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Nigerian Budget Tracker",
@@ -35,9 +35,18 @@ export const metadata: Metadata = {
     title: "Nigerian Budget Tracker",
     description: "Track budget spending across Nigerian states",
     images: [
-      "https://opengraph.b-cdn.net/production/images/eaca33e9-e2ce-45cc-9ce1-a0cee4db9cb5.png?token=3c4CPi2s7blESZllXtFUI96bPacl8Ubi7cf_xWFJGis&height=458&width=1200&expires=33278934701",
+      "/og.png",
     ],
+    creator: "@_Halel",
   },
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.svg",
+  },
+  category: "Finance",
+  keywords: ["Nigeria", "budget", "tracking", "transparency", "government", "finance"],
+  creator: "Praise",
+ 
 }
 
 export default function RootLayout({
