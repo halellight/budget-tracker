@@ -1,0 +1,24 @@
+{
+    "name": "Benue",
+    "code": "benue",
+    "capital": "Makurdi",
+    "region": "North Central",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 158620000000,
+        "recurrentExpenditure": 110490000000,
+        "capitalExpenditure": 48130000000,
+        "sectorAllocations": {
+          "personnelCosts": 56580000000,
+          "otherRecurrentCosts": 53900000000
+        },
+        "revenue": {
+          "igr": 23910000000,
+          "faac": 134710000000,
+          "grants": 67100000000,
+          "loans": null
+        }
+      }
+    ]
+  }

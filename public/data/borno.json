@@ -1,0 +1,25 @@
+{
+    "name": "Borno",
+    "code": "borno",
+    "capital": "Maiduguri",
+    "region": "North East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 340619836000,
+        "recurrentExpenditure": 109200780811.32,
+        "capitalExpenditure": 208371260000,
+        "sectorAllocations": {
+          "personnelExpenditure": 51759689000,
+          "overheadExpenditure": 96566924000,
+          "debtServiceExpenditure": 18453991000
+        },
+        "revenue": {
+          "igr": 128293917971.73,
+          "faac": 157979361432.89,
+          "grants": 102109839000,
+          "loans": 28092132000
+        }
+      }
+    ]
+  }

@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   },
   description: 'Track and analyze Nigerian state budgets transparently',
   keywords: ['Nigeria', 'budget', 'tracking', 'transparency', 'government', 'finance'],
-  authors: [{ name: 'Nigerian Budget Tracker Team' }],
-  creator: 'Nigerian Budget Tracker Team',
+  authors: [{ name: 'Praise Ibe' }],
+  creator: 'Praise Ibe',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
     { media: '(prefers-color-scheme: dark)', color: '#000000' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_NG',
-    url: 'https://budget-tracker.ng',
+    url: 'https://ngtrak.netlify.app/',
     title: 'Nigerian Budget Tracker',
     description: 'Track and analyze Nigerian state budgets transparently',
     siteName: 'Nigerian Budget Tracker',
