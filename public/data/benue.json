@@ -10,8 +10,11 @@
         "recurrentExpenditure": 110490000000,
         "capitalExpenditure": 48130000000,
         "sectorAllocations": {
-          "personnelCosts": 56580000000,
-          "otherRecurrentCosts": 53900000000
+          "education": 23793000000,
+          "health": 19398000000,
+          "infrastructure": 31724000000,
+          "agriculture": 12689000000,
+          "security": null
         },
         "revenue": {
           "igr": 23910000000,

@@ -7,16 +7,18 @@
       {
         "year": "2024",
         "totalBudget": 340619836000,
-        "recurrentExpenditure": 109200780811.32,
+        "recurrentExpenditure": 109200780811,
         "capitalExpenditure": 208371260000,
         "sectorAllocations": {
-          "personnelExpenditure": 51759689000,
-          "overheadExpenditure": 96566924000,
-          "debtServiceExpenditure": 18453991000
+          "education": 38000000000,
+          "health": 51000000000,
+          "infrastructure": 37502075000,
+          "agriculture": null,
+          "security": 5238000000
         },
         "revenue": {
-          "igr": 128293917971.73,
-          "faac": 157979361432.89,
+          "igr": 128293917972,
+          "faac": 157979361433,
           "grants": 102109839000,
           "loans": 28092132000
         }
