@@ -36,7 +36,7 @@ export default function Home() {
                       <p className="text-sm text-zinc-400">
                         Lagos State Budget 2024
                       </p>
-                      <p className="text-2xl font-bold text-white">₦2.25T</p>
+                      <p className="text-2xl font-bold text-white">₦2.26T</p>
                     </div>
                     <PieChart className="h-8 w-8 text-green-500" />
                   </div>
