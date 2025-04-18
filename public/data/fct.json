@@ -1,0 +1,27 @@
+{
+    "name": "Federal Capital Territory",
+    "code": "FCT",
+    "currentGovernor": "Nyesom Wike",
+    "capital": "Abuja",
+    "region": "North-Central",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 1500000000000.00,
+        "recurrentExpenditure": 675000000000.00,
+        "capitalExpenditure": 825000000000.00,
+        "sectorAllocations": {
+          "education": 120000000000.00,
+          "health": 100000000000.00,
+          "infrastructure": 250000000000.00,
+          "agriculture": 75000000000.00
+        },
+        "revenue": {
+          "igr": 350000000000.00,
+          "faac": 980000000000.00,
+          "grants": 100000000000.00,
+          "loans": 70000000000.00
+        }
+      }
+    ]
+  }

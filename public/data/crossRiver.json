@@ -1,0 +1,28 @@
+{
+  "name": "Cross River State",
+  "code": "CROSS_RIVER",
+  "currentGovernor": "Bassey Otu",
+  "capital": "Calabar",
+  "region": "South-South",
+  "budgets": [
+      {
+            "year": "2024",
+            "totalBudget": 350000000000.00,
+            "recurrentExpenditure": 157500000000.00,
+            "capitalExpenditure": 192500000000.00,
+
+            "sectorAllocations": {
+                "education": 28000000000.00,
+                "health": 22000000000.00,
+                "infrastructure": 58000000000.00,
+                "agriculture": 18000000000.00
+            },
+            "revenue": {
+                "igr": 95000000000.00,
+                "faac": 220000000000.00,
+                "grants": 20000000000.00,
+                "loans": 15000000000.00
+            }
+      }
+    ]
+  }

@@ -1,0 +1,27 @@
+{
+    "name": "Ondo State",
+    "code": "ONDO",
+    "currentGovernor": "Lucky Aiyedatiwa",
+    "capital": "Akure",
+    "region": "South-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 395000000000.00,
+        "recurrentExpenditure": 177750000000.00,
+        "capitalExpenditure": 217250000000.00,
+        "sectorAllocations": {
+          "education": 32000000000.00,
+          "health": 25000000000.00,
+          "infrastructure": 65000000000.00,
+          "agriculture": 22000000000.00
+        },
+        "revenue": {
+          "igr": 110000000000.00,
+          "faac": 260000000000.00,
+          "grants": 15000000000.00,
+          "loans": 10000000000.00
+        }
+      }
+    ]
+  }

@@ -1,0 +1,27 @@
+{
+    "name": "Gombe State",
+    "code": "GOMBE",
+    "currentGovernor": "Muhammad Inuwa Yahaya",
+    "capital": "Gombe",
+    "region": "North-East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 240000000000.00,
+        "recurrentExpenditure": 108000000000.00,
+        "capitalExpenditure": 132000000000.00,
+        "sectorAllocations": {
+          "education": 22000000000.00,
+          "health": 18000000000.00,
+          "infrastructure": 38000000000.00,
+          "agriculture": 15000000000.00
+        },
+        "revenue": {
+          "igr": 65000000000.00,
+          "faac": 150000000000.00,
+          "grants": 15000000000.00,
+          "loans": 10000000000.00
+        }
+      }
+    ]
+  }

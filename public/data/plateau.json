@@ -1,0 +1,27 @@
+{
+    "name": "Plateau State",
+    "code": "PLATEAU",
+    "currentGovernor": "Caleb Mutfwang",
+    "capital": "Jos",
+    "region": "North-Central",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 290000000000.00,
+        "recurrentExpenditure": 130500000000.00,
+        "capitalExpenditure": 159500000000.00,
+        "sectorAllocations": {
+          "education": 26000000000.00,
+          "health": 21000000000.00,
+          "infrastructure": 48000000000.00,
+          "agriculture": 19000000000.00
+        },
+        "revenue": {
+          "igr": 78000000000.00,
+          "faac": 190000000000.00,
+          "grants": 14000000000.00,
+          "loans": 8000000000.00
+        }
+      }
+    ]
+  }

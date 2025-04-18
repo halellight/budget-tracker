@@ -1,0 +1,28 @@
+{
+    "name": "Kaduna State",
+    "code": "KADUNA",
+    "currentGovernor": "Uba Sani",
+    "capital": "Kaduna",
+    "region": "North-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 430000000000.00,
+        "recurrentExpenditure": 193500000000.00,
+        "capitalExpenditure": 236500000000.00,
+        "sectorAllocations": {
+          "education": 35000000000.00,
+          "health": 28000000000.00,
+          "infrastructure": 65000000000.00,
+          "agriculture": 22000000000.00
+        },
+        "revenue": {
+          "igr": 125000000000.00,
+          "faac": 275000000000.00,
+          "grants": 20000000000.00,
+          "loans": 10000000000.00
+        }
+      }
+    ]
+  }
+        

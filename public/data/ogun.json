@@ -1,0 +1,27 @@
+{
+    "name": "Ogun State",
+    "code": "OGUN",
+    "currentGovernor": "Dapo Abiodun",
+    "capital": "Abeokuta",
+    "region": "South-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 730000000000.00,
+        "recurrentExpenditure": 328500000000.00,
+        "capitalExpenditure": 401500000000.00,
+        "sectorAllocations": {
+          "education": 50000000000.00,
+          "health": 38000000000.00,
+          "infrastructure": 110000000000.00,
+          "agriculture": 32000000000.00
+        },
+        "revenue": {
+          "igr": 250000000000.00,
+          "faac": 430000000000.00,
+          "grants": 30000000000.00,
+          "loans": 20000000000.00
+        }
+      }
+    ]
+  }

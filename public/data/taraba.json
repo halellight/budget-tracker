@@ -1,0 +1,27 @@
+{
+    "name": "Taraba State",
+    "code": "TARABA",
+    "currentGovernor": "Agbu Kefas",
+    "capital": "Jalingo",
+    "region": "North-East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 270000000000.00,
+        "recurrentExpenditure": 121500000000.00,
+        "capitalExpenditure": 148500000000.00,
+        "sectorAllocations": {
+          "education": 25000000000.00,
+          "health": 20000000000.00,
+          "infrastructure": 45000000000.00,
+          "agriculture": 18000000000.00
+        },
+        "revenue": {
+          "igr": 70000000000.00,
+          "faac": 180000000000.00,
+          "grants": 12000000000.00,
+          "loans": 8000000000.00
+        }
+      }
+    ]
+  }

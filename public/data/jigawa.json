@@ -1,0 +1,27 @@
+{
+    "name": "Jigawa State",
+    "code": "JIGAWA",
+    "currentGovernor": "Umar Namadi",
+    "capital": "Dutse",
+    "region": "North-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 245000000000.00,
+        "recurrentExpenditure": 110250000000.00,
+        "capitalExpenditure": 134750000000.00,
+        "sectorAllocations": {
+          "education": 22000000000.00,
+          "health": 18000000000.00,
+          "infrastructure": 40000000000.00,
+          "agriculture": 16000000000.00
+        },
+        "revenue": {
+          "igr": 60000000000.00,
+          "faac": 165000000000.00,
+          "grants": 12000000000.00,
+          "loans": 8000000000.00
+        }
+      }
+    ]
+  }

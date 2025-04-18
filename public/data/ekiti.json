@@ -1,0 +1,27 @@
+{
+    "name": "Ekiti State",
+    "code": "EKITI",
+    "currentGovernor": "Biodun Oyebanji",
+    "capital": "Ado-Ekiti",
+    "region": "South-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 159000000000.00,
+        "recurrentExpenditure": 71550000000.00,
+        "capitalExpenditure": 87450000000.00,
+        "sectorAllocations": {
+          "education": 18000000000.00,
+          "health": 14000000000.00,
+          "infrastructure": 25000000000.00,
+          "agriculture": 12000000000.00
+        },
+        "revenue": {
+          "igr": 45000000000.00,
+          "faac": 100000000000.00,
+          "grants": 10000000000.00,
+          "loans": 4000000000.00
+        }
+      }
+    ]
+  }

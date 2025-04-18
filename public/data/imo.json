@@ -1,0 +1,27 @@
+{
+    "name": "Imo State",
+    "code": "IMO",
+    "currentGovernor": "Hope Uzodinma",
+    "capital": "Owerri",
+    "region": "South-East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 390000000000.00,
+        "recurrentExpenditure": 175500000000.00,
+        "capitalExpenditure": 214500000000.00,
+        "sectorAllocations": {
+          "education": 30000000000.00,
+          "health": 25000000000.00,
+          "infrastructure": 60000000000.00,
+          "agriculture": 18000000000.00
+        },
+        "revenue": {
+          "igr": 110000000000.00,
+          "faac": 240000000000.00,
+          "grants": 20000000000.00,
+          "loans": 20000000000.00
+        }
+      }
+    ]
+  }

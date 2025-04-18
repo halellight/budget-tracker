@@ -1,0 +1,27 @@
+{
+    "name": "Yobe State",
+    "code": "YOBE",
+    "currentGovernor": "Mai Mala Buni",
+    "capital": "Damaturu",
+    "region": "North-East",
+    "budgets": [
+    {
+        "year": "2024",
+        "totalBudget": 215000000000.00,
+        "recurrentExpenditure": 96750000000.00,
+        "capitalExpenditure": 118250000000.00,
+        "sectorAllocations": {
+        "education": 20000000000.00,
+        "health": 16000000000.00,
+        "infrastructure": 35000000000.00,
+        "agriculture": 14000000000.00
+        },
+        "revenue": {
+        "igr": 55000000000.00,
+        "faac": 140000000000.00,
+        "grants": 12000000000.00,
+        "loans": 8000000000.00
+        }
+  }
+]
+}

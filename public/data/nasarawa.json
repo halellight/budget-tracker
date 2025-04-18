@@ -1,0 +1,27 @@
+{
+    "name": "Nasarawa State",
+    "code": "NASARAWA",
+    "currentGovernor": "Abdullahi Sule",
+    "capital": "Lafia",
+    "region": "North-Central",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 200000000000.00,
+        "recurrentExpenditure": 90000000000.00,
+        "capitalExpenditure": 110000000000.00,
+        "sectorAllocations": {
+          "education": 20000000000.00,
+          "health": 16000000000.00,
+          "infrastructure": 35000000000.00,
+          "agriculture": 15000000000.00
+        },
+        "revenue": {
+          "igr": 55000000000.00,
+          "faac": 130000000000.00,
+          "grants": 10000000000.00,
+          "loans": 5000000000.00
+        }
+      }
+    ]
+  }

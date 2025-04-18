@@ -1,0 +1,29 @@
+{
+    "name": "Ebonyi State",
+    "code": "ebonyi",
+    "currentGovernor": "Francis Nwifuru",
+    "capital": "Abakaliki",
+    "region": "South-East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 202127918907.00,
+        "recurrentExpenditure":  69323178907.00,
+        "capitalExpenditure": 132804740000.00,
+        "sectorAllocations": {
+          "education": 25000000000.00,
+          "health": 20000000000.00,
+          "infrastructure": 45000000000.00,
+          "agriculture": 18000000000.00
+        },
+        "revenue": {
+          "igr": 25100000000.00,
+          "faac":  108320918907.00,
+          "grants": 22607000000.00,
+          "loans": 10000000000.00
+        }
+      }
+    ]
+  }
+
+

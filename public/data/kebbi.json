@@ -1,0 +1,27 @@
+{
+    "name": "Kebbi State",
+    "code": "KEBBI",
+    "currentGovernor": "Nasir Idris",
+    "capital": "Birnin Kebbi",
+    "region": "North-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 250000000000.00,
+        "recurrentExpenditure": 112500000000.00,
+        "capitalExpenditure": 137500000000.00,
+        "sectorAllocations": {
+          "education": 23000000000.00,
+          "health": 180000000000.00,
+          "infrastructure": 42000000000.00,
+          "agriculture": 19000000000.00
+        },
+        "revenue": {
+          "igr": 60000000000.00,
+          "faac": 170000000000.00,
+          "grants": 12000000000.00,
+          "loans": 8000000000.00
+        }
+      }
+    ]
+  }

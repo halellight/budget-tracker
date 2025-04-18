@@ -1,0 +1,28 @@
+{
+  "name": "Bayelsa State",
+  "code": "bayelsa",
+  "capital": "Yenagoa",
+  "region": "South South",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 489443632374.00,
+      "recurrentExpenditure":  224436532374.00,
+      "capitalExpenditure": 265007100000.00,
+  
+      "sectorAllocations": {
+        "education": 3710500000.00,
+        "health": 14000000.00,
+        "infrastructure": 26873500000.00,
+        "agriculture": null,
+        "security": 8335200000.00
+      },
+      "revenue": {
+        "igr": 23869070000.00,
+        "faac": 375249562374.00,
+        "grants": 12700000000.00,
+        "loans": 15000000000.00
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Akwa Ibom State",
+    "code": "AKWA_IBOM",
+    "currentGovernor": "Umo Eno",
+    "capital": "Uyo",
+    "region": "South-South",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 845000000000.00,
+        "recurrentExpenditure": 380250000000.00,
+        "capitalExpenditure": 464750000000.00,
+        "sectorAllocations": {
+          "education": 55000000000.00,
+          "health": 42000000000.00,
+          "infrastructure": 120000000000.00,
+          "agriculture": 35000000000.00
+        },
+        "revenue": {
+          "igr": 250000000000.00,
+          "faac": 520000000000.00,
+          "grants": 45000000000.00,
+          "loans": 30000000000.00
+        }
+      }
+    ]
+  }

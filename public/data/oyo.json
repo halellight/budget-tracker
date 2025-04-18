@@ -1,0 +1,27 @@
+{
+    "name": "Oyo State",
+    "code": "OYO",
+    "currentGovernor": "Seyi Makinde",
+    "capital": "Ibadan",
+    "region": "South-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 434000000000.00,
+        "recurrentExpenditure": 195300000000.00,
+        "capitalExpenditure": 238700000000.00,
+        "sectorAllocations": {
+          "education": 35000000000.00,
+          "health": 28000000000.00,
+          "infrastructure": 70000000000.00,
+          "agriculture": 25000000000.00
+        },
+        "revenue": {
+          "igr": 130000000000.00,
+          "faac": 270000000000.00,
+          "grants": 20000000000.00,
+          "loans": 14000000000.00
+        }
+      }
+    ]
+  }

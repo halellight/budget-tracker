@@ -1,0 +1,27 @@
+{
+    "name": "Anambra State",
+    "code": "ANAMBRA",
+    "currentGovernor": "Charles Soludo",
+    "capital": "Awka",
+    "region": "South-East",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 410000000000.00,
+        "recurrentExpenditure": 184500000000.00,
+        "capitalExpenditure": 225500000000.00,
+        "sectorAllocations": {
+          "education": 32000000000.00,
+          "health": 25000000000.00,
+          "infrastructure": 65000000000.00,
+          "agriculture": 20000000000.00
+        },
+        "revenue": {
+          "igr": 150000000000.00,
+          "faac": 220000000000.00,
+          "grants": 25000000000.00,
+          "loans": 15000000000.00
+        }
+      }
+    ]
+  }

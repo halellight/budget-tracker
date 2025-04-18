@@ -1,0 +1,27 @@
+{
+    "name": "Katsina State",
+    "code": "KATSINA",
+    "currentGovernor": "Dikko Umaru Radda",
+    "capital": "Katsina",
+    "region": "North-West",
+    "budgets": [
+      {
+        "year": "2024",
+        "totalBudget": 335400000000.00,
+        "recurrentExpenditure": 150930000000.00,
+        "capitalExpenditure": 184470000000.00,
+        "sectorAllocations": {
+          "education": 30000000000.00,
+          "health": 22000000000.00,
+          "infrastructure": 48000000000.00,
+          "agriculture": 20000000000.00
+        },
+        "revenue": {
+          "igr": 75000000000.00,
+          "faac": 230000000000.00,
+          "grants": 18000000000.00,
+          "loans": 12400000000.00
+        }
+      }
+    ]
+  }
