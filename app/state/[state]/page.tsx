@@ -63,7 +63,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         {/* State Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={`/states/${stateData.slug}.jpg`} 
+            src={`/states/${stateCode}.jpg`} 
             alt={`${stateData.name} State`}
             className="w-full h-full object-cover opacity-40 object-center mix-blend-luminosity"
           />
