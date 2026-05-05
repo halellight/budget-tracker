@@ -1,0 +1,31 @@
+{
+  "name": "Edo State",
+  "code": "EDO",
+  "capital": "Benin City",
+  "region": "South-South",
+  "currentGovernor": "Monday Okpebholo",
+  "population": 4.7,
+  "description": "Edo State is steeped in history as the seat of the ancient Benin Kingdom, one of the most powerful pre-colonial empires in West Africa. Benin City is renowned worldwide for its intricate bronze artworks. The state is also an important industrial centre with significant oil production and rubber cultivation.",
+  "website": "https://edostate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 488000000000,
+      "recurrentExpenditure": 218000000000,
+      "capitalExpenditure": 270000000000,
+      "sectorAllocations": {
+        "infrastructure": 125000000000,
+        "education": 108000000000,
+        "health": 88000000000,
+        "agriculture": 55000000000,
+        "security": 22000000000
+      },
+      "revenue": {
+        "igr": 55000000000,
+        "faac": 282000000000,
+        "grants": 28000000000,
+        "loans": 123000000000
+      }
+    }
+  ]
+}

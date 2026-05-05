@@ -1,0 +1,31 @@
+{
+  "name": "Imo State",
+  "code": "IMO",
+  "capital": "Owerri",
+  "region": "South-East",
+  "currentGovernor": "Hope Uzodimma",
+  "population": 4.8,
+  "description": "Imo State is one of Nigeria's significant oil-producing states and an important hub for commerce and education in the south-east. Owerri, the capital, is known for its vibrant nightlife and entertainment scene. The state has a rich cultural heritage and is working to leverage its oil revenues for sustainable development.",
+  "website": "https://imostate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 365000000000,
+      "recurrentExpenditure": 168000000000,
+      "capitalExpenditure": 197000000000,
+      "sectorAllocations": {
+        "infrastructure": 92000000000,
+        "education": 82000000000,
+        "health": 65000000000,
+        "agriculture": 40000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 32000000000,
+        "faac": 210000000000,
+        "grants": 22000000000,
+        "loans": 101000000000
+      }
+    }
+  ]
+}

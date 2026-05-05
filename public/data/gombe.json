@@ -1,0 +1,31 @@
+{
+  "name": "Gombe State",
+  "code": "GOMBE",
+  "capital": "Gombe",
+  "region": "North-East",
+  "currentGovernor": "Muhammad Inuwa Yahaya",
+  "population": 3.6,
+  "description": "Gombe State, known as the Jewel in the Savannah, is a growing commercial hub in north-eastern Nigeria. Despite being one of the smaller states, it plays a critical role as a transit point for trade across the north-east. The state has significant investments in agriculture, with cotton, groundnuts, and gum arabic as key cash crops.",
+  "website": "https://gombestate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 225000000000,
+      "recurrentExpenditure": 128000000000,
+      "capitalExpenditure": 97000000000,
+      "sectorAllocations": {
+        "education": 65000000000,
+        "infrastructure": 58000000000,
+        "health": 48000000000,
+        "agriculture": 38000000000,
+        "security": 12000000000
+      },
+      "revenue": {
+        "igr": 12000000000,
+        "faac": 162000000000,
+        "grants": 20000000000,
+        "loans": 31000000000
+      }
+    }
+  ]
+}

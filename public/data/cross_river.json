@@ -1,0 +1,31 @@
+{
+  "name": "Cross River State",
+  "code": "CROSS_RIVER",
+  "capital": "Calabar",
+  "region": "South-South",
+  "currentGovernor": "Bassey Otu",
+  "population": 3.8,
+  "description": "Cross River State is Nigeria's tourism capital, home to the famous Obudu Mountain Resort and Calabar, one of Africa's cleanest cities. The state boasts the largest concentration of biodiversity in West Africa through the Cross River National Park. Calabar is also renowned for its annual December carnival.",
+  "website": "https://crossriverstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 385000000000,
+      "recurrentExpenditure": 195000000000,
+      "capitalExpenditure": 190000000000,
+      "sectorAllocations": {
+        "infrastructure": 95000000000,
+        "education": 88000000000,
+        "health": 70000000000,
+        "agriculture": 48000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 35000000000,
+        "faac": 215000000000,
+        "grants": 30000000000,
+        "loans": 105000000000
+      }
+    }
+  ]
+}

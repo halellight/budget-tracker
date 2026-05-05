@@ -1,0 +1,31 @@
+{
+  "name": "Nasarawa State",
+  "code": "NASARAWA",
+  "capital": "Lafia",
+  "region": "North-Central",
+  "currentGovernor": "Abdullahi Sule",
+  "population": 2.6,
+  "description": "Nasarawa State, created in 1996 from Plateau State, is strategically located adjacent to the Federal Capital Territory. Its proximity to Abuja has spurred rapid economic growth with many residents commuting to the capital. The state has significant solid mineral deposits and is developing agro-industrial zones to leverage its agricultural potential.",
+  "website": "https://nasarawastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 238000000000,
+      "recurrentExpenditure": 132000000000,
+      "capitalExpenditure": 106000000000,
+      "sectorAllocations": {
+        "infrastructure": 62000000000,
+        "education": 60000000000,
+        "health": 52000000000,
+        "agriculture": 42000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 18000000000,
+        "faac": 172000000000,
+        "grants": 20000000000,
+        "loans": 28000000000
+      }
+    }
+  ]
+}

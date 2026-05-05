@@ -1,38 +1,38 @@
-import Link from "next/link"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { getAllStates } from "@/lib/api"
+import type { Metadata } from "next"
+import { getAllStates, getStateData } from "@/lib/api"
+import { StatesClient } from "@/components/states-client"
+import type { StateData } from "@/types/budget"
+
+export const metadata: Metadata = {
+  title: "All Nigerian States",
+  description: "Explore budget data for all 36 Nigerian states and the FCT. Filter by region, search by name, and compare total budget sizes.",
+}
 
 export default async function StatesPage() {
-  const states = await getAllStates()
+  const stateNames = await getAllStates()
+
+  const statesWithData = await Promise.all(
+    stateNames.map(async (slug) => {
+      const data = await getStateData(slug)
+      return data ? { ...data, slug } : null
+    })
+  )
+
+  const states = statesWithData.filter(Boolean) as (StateData & { slug: string })[]
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-8 text-center">Nigerian States</h1>
+    <div className="container mx-auto px-4 sm:px-6 py-12">
+      {/* Page header */}
+      <div className="mb-10">
+        <p className="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Budget Data</p>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-3">All Nigerian States</h1>
+        <p className="text-muted-foreground max-w-2xl">
+          Comprehensive 2024 budget data for all 36 states and the Federal Capital Territory.
+          Search, filter by region, and explore how each state allocates its resources.
+        </p>
+      </div>
 
-      {states.length === 0 ? (
-        <div className="text-center mt-8">
-          <p className="mb-4">No state data available. Please upload data for states.</p>
-          <Link href="/admin/upload" className="text-primary hover:underline">
-            Go to Upload Page
-          </Link>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {states.map((state) => (
-            <Link href={`/state/${state}`} key={state}>
-              <Card className="hover:bg-accent transition-colors">
-                <CardHeader>
-                  <CardTitle className="capitalize">{state}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>View budget data for {state.charAt(0).toUpperCase() + state.slice(1)} State</p>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      )}
+      <StatesClient states={states} />
     </div>
   )
 }
-

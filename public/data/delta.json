@@ -1,0 +1,31 @@
+{
+  "name": "Delta State",
+  "code": "DELTA",
+  "capital": "Asaba",
+  "region": "South-South",
+  "currentGovernor": "Sheriff Oborevwori",
+  "population": 5.7,
+  "description": "Delta State is one of Nigeria's foremost oil-producing states, contributing significantly to the nation's petroleum output. The state hosts major oil companies and has one of the highest derivation fund receipts. Warri, the state's commercial capital, is a major oil industry hub.",
+  "website": "https://deltastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 680000000000,
+      "recurrentExpenditure": 290000000000,
+      "capitalExpenditure": 390000000000,
+      "sectorAllocations": {
+        "infrastructure": 175000000000,
+        "education": 145000000000,
+        "health": 115000000000,
+        "agriculture": 52000000000,
+        "security": 28000000000
+      },
+      "revenue": {
+        "igr": 75000000000,
+        "faac": 420000000000,
+        "grants": 32000000000,
+        "loans": 153000000000
+      }
+    }
+  ]
+}

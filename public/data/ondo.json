@@ -1,0 +1,31 @@
+{
+  "name": "Ondo State",
+  "code": "ONDO",
+  "capital": "Akure",
+  "region": "South-West",
+  "currentGovernor": "Lucky Aiyedatiwa",
+  "population": 4.9,
+  "description": "Ondo State is a major oil-producing state in Nigeria's south-west, blessed with significant crude oil reserves offshore and onshore. The state is also a major producer of cocoa, timber, and bitumen, and is known as the Sunshine State.",
+  "website": "https://ondostate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 387000000000,
+      "recurrentExpenditure": 185000000000,
+      "capitalExpenditure": 202000000000,
+      "sectorAllocations": {
+        "infrastructure": 98000000000,
+        "education": 88000000000,
+        "health": 72000000000,
+        "agriculture": 45000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 45000000000,
+        "faac": 210000000000,
+        "grants": 25000000000,
+        "loans": 107000000000
+      }
+    }
+  ]
+}

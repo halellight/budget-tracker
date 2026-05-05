@@ -1,0 +1,31 @@
+{
+  "name": "Kogi State",
+  "code": "KOGI",
+  "capital": "Lokoja",
+  "region": "North-Central",
+  "currentGovernor": "Ahmed Usman Ododo",
+  "population": 4.5,
+  "description": "Kogi State is the confluence state, where the rivers Niger and Benue meet at Lokoja — Nigeria's first administrative capital under colonial rule. The state is rich in solid minerals including coal, iron ore, limestone, and marble. Lokoja is a strategic transit point for goods across Nigeria.",
+  "website": "https://kogistate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 355000000000,
+      "recurrentExpenditure": 178000000000,
+      "capitalExpenditure": 177000000000,
+      "sectorAllocations": {
+        "infrastructure": 95000000000,
+        "education": 85000000000,
+        "health": 72000000000,
+        "agriculture": 58000000000,
+        "security": 25000000000
+      },
+      "revenue": {
+        "igr": 28000000000,
+        "faac": 235000000000,
+        "grants": 22000000000,
+        "loans": 70000000000
+      }
+    }
+  ]
+}

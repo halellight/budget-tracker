@@ -1,0 +1,31 @@
+{
+  "name": "Taraba State",
+  "code": "TARABA",
+  "capital": "Jalingo",
+  "region": "North-East",
+  "currentGovernor": "Agbu Kefas",
+  "population": 3.7,
+  "description": "Taraba State, the 'Nature's Gift to the Nation', is endowed with spectacular natural beauty, including the Gashaka-Gumti National Park — Nigeria's largest national park. The state has enormous agricultural potential with fertile lands along the Benue and Taraba rivers, producing yams, maize, and cash crops like coffee and tea.",
+  "website": "https://tarabastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 215000000000,
+      "recurrentExpenditure": 122000000000,
+      "capitalExpenditure": 93000000000,
+      "sectorAllocations": {
+        "agriculture": 60000000000,
+        "infrastructure": 55000000000,
+        "education": 52000000000,
+        "health": 38000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 10000000000,
+        "faac": 155000000000,
+        "grants": 18000000000,
+        "loans": 32000000000
+      }
+    }
+  ]
+}

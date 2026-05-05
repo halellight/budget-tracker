@@ -1,0 +1,31 @@
+{
+  "name": "Zamfara State",
+  "code": "ZAMFARA",
+  "capital": "Gusau",
+  "region": "North-West",
+  "currentGovernor": "Dauda Lawal",
+  "population": 4.5,
+  "description": "Zamfara State is a significant gold-producing state in Nigeria, with small-scale artisanal gold mining being a major economic activity. The state faces security challenges from banditry and is working on peace and reconciliation efforts. Gusau is a commercial hub connecting the north-west to other regions.",
+  "website": "https://zamfarastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 222000000000,
+      "recurrentExpenditure": 128000000000,
+      "capitalExpenditure": 94000000000,
+      "sectorAllocations": {
+        "security": 45000000000,
+        "education": 62000000000,
+        "agriculture": 52000000000,
+        "infrastructure": 42000000000,
+        "health": 32000000000
+      },
+      "revenue": {
+        "igr": 10000000000,
+        "faac": 158000000000,
+        "grants": 18000000000,
+        "loans": 36000000000
+      }
+    }
+  ]
+}

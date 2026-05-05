@@ -1,0 +1,31 @@
+{
+  "name": "Sokoto State",
+  "code": "SOKOTO",
+  "capital": "Sokoto",
+  "region": "North-West",
+  "currentGovernor": "Ahmed Aliyu",
+  "population": 5.5,
+  "description": "Sokoto State, known as the Seat of the Caliphate, is home to the Sultan of Sokoto — the spiritual leader of Nigerian Muslims. The state is a major centre of Islamic scholarship and has one of the oldest traditions of governance in West Africa. It is also known for producing high-quality leather goods and livestock.",
+  "website": "https://sokotostate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 228000000000,
+      "recurrentExpenditure": 135000000000,
+      "capitalExpenditure": 93000000000,
+      "sectorAllocations": {
+        "education": 68000000000,
+        "agriculture": 55000000000,
+        "infrastructure": 52000000000,
+        "health": 38000000000,
+        "security": 15000000000
+      },
+      "revenue": {
+        "igr": 14000000000,
+        "faac": 160000000000,
+        "grants": 18000000000,
+        "loans": 36000000000
+      }
+    }
+  ]
+}

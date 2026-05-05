@@ -1,29 +1,31 @@
 {
-    "name": "Enugu State",
-    "code": "ENUGU",
-    "capital": "Enugu",
-    "region": "South-East",
-    "currentGovernor": "Peter Ndubuisi Mbah",
-    "budgets": [
-      {
-        "year": "2024",
-        "totalBudget": 521561386000,
-        "recurrentExpenditure": 372789000000,
-        "capitalExpenditure": 414334120000,
-        "sectorAllocations": {
-          "education": 132298743995,
-          "health": 78649302780,
-          "infrastructure": 175849217000,
-          "agriculture": 40275630000,
-          "security": 1150000000
-        },
-        "revenue": {
-          "igr": 252789000000,
-          "faac": 120000000000,
-          "grants": 34022386000,
-          "loans": 103750000000
-        }
+  "name": "Enugu State",
+  "code": "ENUGU",
+  "capital": "Enugu",
+  "region": "South-East",
+  "currentGovernor": "Peter Mbah",
+  "population": 4.5,
+  "description": "Enugu State, the Coal City State, was built on coal mining that powered Nigeria's early industrialisation. Today it has diversified into commerce, education, and services. Enugu City is the administrative and cultural capital of the south-east, home to major institutions and a thriving business district. Governor Peter Mbah is pursuing an ambitious $30B GDP transformation agenda.",
+  "website": "https://enugustate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 385000000000,
+      "recurrentExpenditure": 175000000000,
+      "capitalExpenditure": 210000000000,
+      "sectorAllocations": {
+        "infrastructure": 98000000000,
+        "education": 88000000000,
+        "health": 72000000000,
+        "agriculture": 48000000000,
+        "security": 20000000000
+      },
+      "revenue": {
+        "igr": 42000000000,
+        "faac": 218000000000,
+        "grants": 28000000000,
+        "loans": 97000000000
       }
-    ]
-  }
-  
+    }
+  ]
+}

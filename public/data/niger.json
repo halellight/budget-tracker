@@ -1,0 +1,31 @@
+{
+  "name": "Niger State",
+  "code": "NIGER",
+  "capital": "Minna",
+  "region": "North-Central",
+  "currentGovernor": "Bago Mohammed",
+  "population": 5.7,
+  "description": "Niger State is the largest state in Nigeria by land area and is home to the Kainji Dam, the country's largest hydroelectric power plant. The state is rich in natural resources including gold, iron ore, and limestone. Minna is a growing commercial centre and the state has significant agricultural and solid mineral potential.",
+  "website": "https://nigerstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 328000000000,
+      "recurrentExpenditure": 168000000000,
+      "capitalExpenditure": 160000000000,
+      "sectorAllocations": {
+        "infrastructure": 88000000000,
+        "agriculture": 72000000000,
+        "education": 78000000000,
+        "health": 58000000000,
+        "security": 22000000000
+      },
+      "revenue": {
+        "igr": 22000000000,
+        "faac": 218000000000,
+        "grants": 25000000000,
+        "loans": 63000000000
+      }
+    }
+  ]
+}

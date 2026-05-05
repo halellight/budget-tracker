@@ -1,0 +1,31 @@
+{
+  "name": "Ekiti State",
+  "code": "EKITI",
+  "capital": "Ado-Ekiti",
+  "region": "South-West",
+  "currentGovernor": "Biodun Oyebanji",
+  "population": 3.3,
+  "description": "Ekiti State is known as the land of honour and integrity. Despite being a relatively small state, it has a high literacy rate and produces many of Nigeria's academics and professionals. The state government is focused on improving education infrastructure and agricultural productivity.",
+  "website": "https://ekitistate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 215000000000,
+      "recurrentExpenditure": 128000000000,
+      "capitalExpenditure": 87000000000,
+      "sectorAllocations": {
+        "education": 68000000000,
+        "infrastructure": 52000000000,
+        "health": 42000000000,
+        "agriculture": 28000000000,
+        "security": 10000000000
+      },
+      "revenue": {
+        "igr": 22000000000,
+        "faac": 138000000000,
+        "grants": 18000000000,
+        "loans": 37000000000
+      }
+    }
+  ]
+}

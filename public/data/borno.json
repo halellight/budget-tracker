@@ -1,0 +1,31 @@
+{
+  "name": "Borno State",
+  "code": "BORNO",
+  "capital": "Maiduguri",
+  "region": "North-East",
+  "currentGovernor": "Babagana Zulum",
+  "population": 5.9,
+  "description": "Borno State is Nigeria's largest state by land area and has been at the epicentre of the Boko Haram insurgency. Despite the security challenges, Governor Zulum has been lauded internationally for his humanitarian leadership. The state is working on rebuilding from decades of conflict while leveraging its agricultural potential around Lake Chad.",
+  "website": "https://bornos.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 408000000000,
+      "recurrentExpenditure": 195000000000,
+      "capitalExpenditure": 213000000000,
+      "sectorAllocations": {
+        "security": 88000000000,
+        "infrastructure": 95000000000,
+        "education": 82000000000,
+        "health": 68000000000,
+        "agriculture": 48000000000
+      },
+      "revenue": {
+        "igr": 18000000000,
+        "faac": 228000000000,
+        "grants": 85000000000,
+        "loans": 77000000000
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Kaduna State",
+  "code": "KADUNA",
+  "capital": "Kaduna",
+  "region": "North-West",
+  "currentGovernor": "Uba Sani",
+  "population": 9.0,
+  "description": "Kaduna is the most populous state in northern Nigeria and was once the political capital of northern Nigeria. The city of Kaduna is a major industrial and commercial centre. The state has a diverse mix of cultures and ethnicities and is home to the Nigerian Defence Academy and numerous institutions of higher learning.",
+  "website": "https://kadunastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 415000000000,
+      "recurrentExpenditure": 198000000000,
+      "capitalExpenditure": 217000000000,
+      "sectorAllocations": {
+        "education": 128000000000,
+        "infrastructure": 105000000000,
+        "health": 82000000000,
+        "agriculture": 58000000000,
+        "security": 25000000000
+      },
+      "revenue": {
+        "igr": 62000000000,
+        "faac": 258000000000,
+        "grants": 28000000000,
+        "loans": 67000000000
+      }
+    }
+  ]
+}

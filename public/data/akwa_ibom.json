@@ -1,0 +1,31 @@
+{
+  "name": "Akwa Ibom State",
+  "code": "AKWA_IBOM",
+  "capital": "Uyo",
+  "region": "South-South",
+  "currentGovernor": "Umo Eno",
+  "population": 5.5,
+  "description": "Akwa Ibom is the highest oil-producing state in Nigeria, contributing over 30% of the nation's total crude oil output. Uyo, its capital, has been transformed into a modern city with world-class infrastructure. The state also has a vibrant tourism sector anchored by the Ibom Tropicana Entertainment Centre.",
+  "website": "https://akwaibomstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 620000000000,
+      "recurrentExpenditure": 265000000000,
+      "capitalExpenditure": 355000000000,
+      "sectorAllocations": {
+        "infrastructure": 158000000000,
+        "education": 140000000000,
+        "health": 110000000000,
+        "agriculture": 48000000000,
+        "security": 22000000000
+      },
+      "revenue": {
+        "igr": 48000000000,
+        "faac": 410000000000,
+        "grants": 28000000000,
+        "loans": 134000000000
+      }
+    }
+  ]
+}

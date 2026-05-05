@@ -1,0 +1,31 @@
+{
+  "name": "FCT Abuja",
+  "code": "FCT",
+  "capital": "Abuja",
+  "region": "FCT",
+  "currentGovernor": "Nyesom Wike (FCT Minister)",
+  "population": 3.6,
+  "description": "The Federal Capital Territory (FCT) is the seat of the Nigerian federal government, purpose-built as the nation's capital in the late 1970s and officially opened in 1991. Abuja is a modern, planned city and is one of the fastest-growing cities in Africa. It hosts all federal government ministries, embassies, and international organisations.",
+  "website": "https://fct.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 855000000000,
+      "recurrentExpenditure": 380000000000,
+      "capitalExpenditure": 475000000000,
+      "sectorAllocations": {
+        "infrastructure": 245000000000,
+        "education": 148000000000,
+        "health": 125000000000,
+        "agriculture": 48000000000,
+        "security": 72000000000
+      },
+      "revenue": {
+        "igr": 95000000000,
+        "faac": 485000000000,
+        "grants": 55000000000,
+        "loans": 220000000000
+      }
+    }
+  ]
+}

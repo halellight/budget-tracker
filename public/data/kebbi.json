@@ -1,0 +1,31 @@
+{
+  "name": "Kebbi State",
+  "code": "KEBBI",
+  "capital": "Birnin Kebbi",
+  "region": "North-West",
+  "currentGovernor": "Nasir Idris",
+  "population": 4.4,
+  "description": "Kebbi State is one of the leading rice-producing states in Nigeria, playing a pivotal role in Nigeria's food security strategy. The Kebbi-Lagos Rice initiative brought agriculture into national prominence. The state is also known for the Argungu Fishing Festival, one of Africa's most spectacular cultural events.",
+  "website": "https://kebbistate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 252000000000,
+      "recurrentExpenditure": 138000000000,
+      "capitalExpenditure": 114000000000,
+      "sectorAllocations": {
+        "agriculture": 72000000000,
+        "education": 68000000000,
+        "infrastructure": 58000000000,
+        "health": 38000000000,
+        "security": 12000000000
+      },
+      "revenue": {
+        "igr": 15000000000,
+        "faac": 175000000000,
+        "grants": 22000000000,
+        "loans": 40000000000
+      }
+    }
+  ]
+}

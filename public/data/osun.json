@@ -1,0 +1,31 @@
+{
+  "name": "Osun State",
+  "code": "OSUN",
+  "capital": "Osogbo",
+  "region": "South-West",
+  "currentGovernor": "Ademola Adeleke",
+  "population": 4.7,
+  "description": "Osun State, named after the Osun River and its famous goddess, is a state rich in culture and heritage. The Osun-Osogbo Sacred Grove is a UNESCO World Heritage Site. The state has been working to diversify its economy from its traditional agricultural base toward manufacturing and services.",
+  "website": "https://osunstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 268000000000,
+      "recurrentExpenditure": 162000000000,
+      "capitalExpenditure": 106000000000,
+      "sectorAllocations": {
+        "education": 75000000000,
+        "infrastructure": 68000000000,
+        "health": 55000000000,
+        "agriculture": 38000000000,
+        "security": 14000000000
+      },
+      "revenue": {
+        "igr": 28000000000,
+        "faac": 172000000000,
+        "grants": 20000000000,
+        "loans": 48000000000
+      }
+    }
+  ]
+}

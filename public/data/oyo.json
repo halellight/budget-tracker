@@ -1,0 +1,31 @@
+{
+  "name": "Oyo State",
+  "code": "OYO",
+  "capital": "Ibadan",
+  "region": "South-West",
+  "currentGovernor": "Seyi Makinde",
+  "population": 8.0,
+  "description": "Oyo State is one of the largest states in Nigeria by land area and population. Its capital Ibadan was formerly the largest city in sub-Saharan Africa. The state is a major hub for commerce, agriculture, and education, home to the University of Ibadan — Nigeria's oldest university.",
+  "website": "https://oyostate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 479000000000,
+      "recurrentExpenditure": 210000000000,
+      "capitalExpenditure": 269000000000,
+      "sectorAllocations": {
+        "education": 130000000000,
+        "infrastructure": 115000000000,
+        "health": 95000000000,
+        "agriculture": 62000000000,
+        "security": 22000000000
+      },
+      "revenue": {
+        "igr": 95000000000,
+        "faac": 248000000000,
+        "grants": 32000000000,
+        "loans": 104000000000
+      }
+    }
+  ]
+}

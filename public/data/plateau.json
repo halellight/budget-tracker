@@ -1,0 +1,31 @@
+{
+  "name": "Plateau State",
+  "code": "PLATEAU",
+  "capital": "Jos",
+  "region": "North-Central",
+  "currentGovernor": "Caleb Mutfwang",
+  "population": 4.2,
+  "description": "Plateau State, the Home of Peace and Tourism, sits on a high plateau at 1,200 metres above sea level, giving it a temperate climate unique in Nigeria. Jos is one of the most pleasant cities in Nigeria with a cool climate year-round. The state produces significant quantities of vegetables, fruits, and is a major producer of tin and columbite.",
+  "website": "https://plateaustate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 385000000000,
+      "recurrentExpenditure": 190000000000,
+      "capitalExpenditure": 195000000000,
+      "sectorAllocations": {
+        "infrastructure": 98000000000,
+        "education": 92000000000,
+        "health": 78000000000,
+        "agriculture": 62000000000,
+        "security": 38000000000
+      },
+      "revenue": {
+        "igr": 28000000000,
+        "faac": 228000000000,
+        "grants": 32000000000,
+        "loans": 97000000000
+      }
+    }
+  ]
+}

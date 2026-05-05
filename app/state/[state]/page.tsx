@@ -1,163 +1,175 @@
 import { notFound } from "next/navigation"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { getStateData } from "@/lib/api"
+import type { Metadata } from "next"
+import Link from "next/link"
+import { getStateData, getAllStates } from "@/lib/api"
 import { formatCurrency } from "@/lib/utils"
-import { formatCurrencyInWords } from "@/lib/number-to-words"
-import { BarChart } from "@/components/bar-chart"
+import { BudgetCharts } from "@/components/BudgetChart"
 import { BudgetInsights } from "@/components/budget-insights"
 import { BudgetGlossary } from "@/components/budget-glossary"
-import { StateHeader } from "@/components/state-header"
+import { ArrowLeft, ExternalLink } from "lucide-react"
 
-const chartColors = {
-  education: "#22C55E",
-  health: "#3B82F6",
-  infrastructure: "#F59E0B",
-  agriculture: "#EC4899",
-  security: "#8B5CF6",
-  igr: "#EF4444",
-  faac: "#64748B",
-  grants: "#06B6D4",
-  loans: "#9333EA",
+export async function generateStaticParams() {
+  const states = await getAllStates()
+  return states.map((s) => ({ state: s }))
 }
 
-export default async function StatePage({ params }: { params: { state: string } }) {
-  // Use a local variable to avoid the params.state error
-  const stateCode = params.state.toLowerCase()
+export async function generateMetadata({ params }: { params: Promise<{ state: string }> }): Promise<Metadata> {
+  const { state } = await params
+  const data = await getStateData(state)
+  if (!data) return { title: "State Not Found" }
+  const budget = data.budgets[data.budgets.length - 1]
+  return {
+    title: `${data.name} State Budget`,
+    description: `${data.name} ${budget.year} budget: ${formatCurrency(budget.totalBudget)} total.`,
+  }
+}
+
+export default async function StatePage({ params }: { params: Promise<{ state: string }> }) {
+  const { state: stateParam } = await params
+  const stateCode = stateParam.toLowerCase()
   const stateData = await getStateData(stateCode)
 
-  if (!stateData) {
-    notFound()
-  }
+  if (!stateData) notFound()
 
   const latestBudget = stateData.budgets[stateData.budgets.length - 1]
+  const hasPrev = stateData.budgets.length > 1
+  const prevBudget = hasPrev ? stateData.budgets[stateData.budgets.length - 2] : null
 
   const sectorData = Object.entries(latestBudget.sectorAllocations).map(([sector, amount]) => ({
-    label: sector.charAt(0).toUpperCase() + sector.slice(1),
-    value: amount,
-    color: chartColors[sector.toLowerCase() as keyof typeof chartColors] || "#22C55E",
+    sector,
+    amount,
     percentage: (amount / latestBudget.totalBudget) * 100,
   }))
 
   const revenueData = Object.entries(latestBudget.revenue).map(([source, amount]) => ({
-    label: source.toUpperCase(),
-    value: amount,
-    color: chartColors[source.toLowerCase() as keyof typeof chartColors] || "#EF4444",
+    source,
+    amount,
     percentage: (amount / latestBudget.totalBudget) * 100,
   }))
 
-  // Pre-format currency values for the client component
-  const sectorCurrencyValues = sectorData.map((item) => formatCurrency(item.value))
-  const revenueCurrencyValues = revenueData.map((item) => formatCurrency(item.value))
+  const totalRevenue = Object.values(latestBudget.revenue).reduce((a, b) => a + b, 0)
+  const balance = totalRevenue - latestBudget.totalBudget
+  const capPct = Math.round((latestBudget.capitalExpenditure / latestBudget.totalBudget) * 100)
+  const recPct = 100 - capPct
+
+  const budgetChange = prevBudget
+    ? ((latestBudget.totalBudget - prevBudget.totalBudget) / prevBudget.totalBudget) * 100
+    : null
 
   return (
-    <div className="container mx-auto p-4">
-      <StateHeader stateName={stateData.name} year={latestBudget.year} statePath={stateCode} />
+    <div className="pb-20">
+      {/* ── STARK HEADER ── */}
+      <div className="sharp-border-bottom bg-card pt-10 pb-16 relative overflow-hidden">
+        {/* State Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={`/states/${stateData.slug}.jpg`} 
+            alt={`${stateData.name} State`}
+            className="w-full h-full object-cover opacity-40 object-center mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-card via-card/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Total Budget</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">{formatCurrency(latestBudget.totalBudget)}</div>
-            <div className="text-muted-foreground mt-1">{formatCurrencyInWords(latestBudget.totalBudget)}</div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Expenditure Split</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div>
-                <div className="text-sm text-muted-foreground">Recurrent</div>
-                <div className="text-xl font-bold">{formatCurrency(latestBudget.recurrentExpenditure)}</div>
-                <div className="text-xs text-muted-foreground">
-                  {formatCurrencyInWords(latestBudget.recurrentExpenditure)}
-                </div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <Link
+            href="/states"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground mb-10 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" /> All States
+          </Link>
+
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="px-3 py-1 bg-border text-xs font-bold uppercase tracking-widest">
+                  {stateData.region}
+                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                  Cap: {stateData.capital}
+                </span>
               </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Capital</div>
-                <div className="text-xl font-bold">{formatCurrency(latestBudget.capitalExpenditure)}</div>
-                <div className="text-xs text-muted-foreground">
-                  {formatCurrencyInWords(latestBudget.capitalExpenditure)}
-                </div>
+
+              <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tighter leading-none mb-4">
+                {stateData.name} <span className="text-primary">.</span>
+              </h1>
+              
+              <div className="flex flex-wrap items-center gap-6 text-sm font-medium border-l-2 border-primary pl-4">
+                <div><span className="text-muted-foreground uppercase text-xs font-bold tracking-widest block mb-1">Governor</span> {stateData.currentGovernor}</div>
+                {stateData.population && <div><span className="text-muted-foreground uppercase text-xs font-bold tracking-widest block mb-1">Pop.</span> ~{stateData.population}M</div>}
+                {stateData.website && (
+                  <div>
+                    <span className="text-muted-foreground uppercase text-xs font-bold tracking-widest block mb-1">Portal</span>
+                    <a href={stateData.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+                      Website <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
-          </CardContent>
-        </Card>
+
+            {/* Massive total budget block */}
+            <div className="bg-background sharp-border p-6 lg:p-8 min-w-[300px]">
+              <div className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Total {latestBudget.year} Budget</div>
+              <div className="text-3xl sm:text-5xl font-black tracking-tight mb-1">{formatCurrency(latestBudget.totalBudget)}</div>
+              {budgetChange !== null && (
+                <div className={`text-sm font-bold uppercase tracking-wider ${budgetChange > 0 ? "text-primary" : "text-destructive"}`}>
+                  {budgetChange > 0 ? "+" : ""}{budgetChange.toFixed(1)}% vs {prevBudget?.year}
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {stateData.description && (
+            <p className="text-muted-foreground mt-10 max-w-3xl leading-relaxed font-medium">
+              {stateData.description}
+            </p>
+          )}
+        </div>
       </div>
 
-      
+      {/* ── KEY METRICS BENTO ── */}
+      <div className="container mx-auto px-4 sm:px-6 pt-16">
+        <h2 className="text-3xl font-black uppercase tracking-tight mb-8">Metrics Overview</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border sharp-border mb-16">
+          {[
+            { label: "Capital Exp.", value: formatCurrency(latestBudget.capitalExpenditure), sub: `${capPct}% of total` },
+            { label: "Recurrent Exp.", value: formatCurrency(latestBudget.recurrentExpenditure), sub: `${recPct}% of total` },
+            { label: "Total Revenue", value: formatCurrency(totalRevenue), sub: "Estimated income" },
+            { 
+              label: "Fiscal Balance", 
+              value: balance > 0 ? "Surplus" : balance < 0 ? "Deficit" : "Balanced", 
+              sub: balance !== 0 ? formatCurrency(Math.abs(balance)) : "Matched",
+              textColor: balance > 0 ? "text-primary" : balance < 0 ? "text-destructive" : ""
+            },
+          ].map(({ label, value, sub, textColor }) => (
+            <div key={label} className="bg-card p-8">
+              <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">{label}</div>
+              <div className={`text-2xl font-black mb-1 ${textColor || "text-foreground"}`}>{value}</div>
+              <div className="text-sm font-medium text-muted-foreground">{sub}</div>
+            </div>
+          ))}
+        </div>
 
-      <div className="mt-8">
-        <Tabs defaultValue="sectors" className="mb-8">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="sectors">Sector Allocation</TabsTrigger>
-            <TabsTrigger value="revenue">Revenue Sources</TabsTrigger>
-          </TabsList>
-          <TabsContent value="sectors">
-            <Card>
-              <CardHeader>
-                <CardTitle>Budget Allocation by Sector</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="h-[400px] mb-6">
-                  <BarChart data={sectorData} height={350} currencyFormatter={sectorCurrencyValues} />
-                </div>
-                <div className="mt-4 grid gap-2">
-                  {sectorData.map((item, index) => (
-                    <div key={item.label} className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
-                        <span>{item.label}</span>
-                      </div>
-                      <div className="text-right">
-                        <div className="font-medium">{sectorCurrencyValues[index]}</div>
-                        <div className="text-sm text-muted-foreground">{item.percentage.toFixed(1)}%</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="revenue">
-            <Card>
-              <CardHeader>
-                <CardTitle>Revenue Sources</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="h-[400px] mb-6">
-                  <BarChart data={revenueData} height={350} currencyFormatter={revenueCurrencyValues} />
-                </div>
-                <div className="mt-4 grid gap-2">
-                  {revenueData.map((item, index) => (
-                    <div key={item.label} className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
-                        <span>{item.label}</span>
-                      </div>
-                      <div className="text-right">
-                        <div className="font-medium">{revenueCurrencyValues[index]}</div>
-                        <div className="text-sm text-muted-foreground">{item.percentage.toFixed(1)}%</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      </div>
+        {/* ── CHARTS SECTION ── */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-black uppercase tracking-tight mb-8">Breakdowns</h2>
+          <div className="sharp-border bg-card">
+            <BudgetCharts sectorData={sectorData} revenueData={revenueData} />
+          </div>
+        </div>
 
-      <BudgetInsights budget={latestBudget} stateName={stateData.name} />
+        {/* ── INSIGHTS & GLOSSARY ── */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="sharp-border bg-card p-0">
+            <BudgetInsights budget={latestBudget} stateName={stateData.name} />
+          </div>
+          <div className="sharp-border bg-card p-0">
+            <BudgetGlossary />
+          </div>
+        </div>
 
-      <div className="mt-8">
-        <BudgetGlossary />
       </div>
     </div>
   )
 }
-

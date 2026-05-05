@@ -1,0 +1,31 @@
+{
+  "name": "Jigawa State",
+  "code": "JIGAWA",
+  "capital": "Dutse",
+  "region": "North-West",
+  "currentGovernor": "Umar Namadi",
+  "population": 5.8,
+  "description": "Jigawa State is one of the most agrarian states in Nigeria, with about 80% of its population engaged in farming. The state is a major producer of groundnuts, millet, sorghum, and cotton. Dutse, the capital, is one of the few state capitals in Nigeria built from scratch after the state's creation in 1991.",
+  "website": "https://jigawastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 255000000000,
+      "recurrentExpenditure": 142000000000,
+      "capitalExpenditure": 113000000000,
+      "sectorAllocations": {
+        "agriculture": 75000000000,
+        "education": 72000000000,
+        "infrastructure": 55000000000,
+        "health": 38000000000,
+        "security": 10000000000
+      },
+      "revenue": {
+        "igr": 12000000000,
+        "faac": 185000000000,
+        "grants": 20000000000,
+        "loans": 38000000000
+      }
+    }
+  ]
+}

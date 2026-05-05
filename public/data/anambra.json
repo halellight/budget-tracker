@@ -1,0 +1,31 @@
+{
+  "name": "Anambra State",
+  "code": "ANAMBRA",
+  "capital": "Awka",
+  "region": "South-East",
+  "currentGovernor": "Charles Soludo",
+  "population": 6.5,
+  "description": "Anambra State is the commercial heartbeat of south-east Nigeria, home to the bustling Onitsha Market — one of the largest markets in Africa. The state has a highly entrepreneurial population and is known for producing many of Nigeria's most successful business people. Governor Soludo, a former CBN Governor, is driving an ambitious economic transformation agenda.",
+  "website": "https://anambrastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 380000000000,
+      "recurrentExpenditure": 158000000000,
+      "capitalExpenditure": 222000000000,
+      "sectorAllocations": {
+        "infrastructure": 98000000000,
+        "education": 88000000000,
+        "health": 68000000000,
+        "agriculture": 42000000000,
+        "security": 20000000000
+      },
+      "revenue": {
+        "igr": 75000000000,
+        "faac": 205000000000,
+        "grants": 25000000000,
+        "loans": 75000000000
+      }
+    }
+  ]
+}

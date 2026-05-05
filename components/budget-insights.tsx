@@ -1,87 +1,73 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import type { StateBudget } from "@/types/budget"
 import { formatCurrency } from "@/lib/utils"
-import { formatCurrencyInWords } from "@/lib/number-to-words"
 
-interface BudgetInsightsProps {
-  budget: StateBudget
-  stateName: string
+import type { StateBudget } from "@/types/budget"
+
+function formatCurrencyInWords(amount: number): string {
+  if (amount >= 1_000_000_000_000) return `₦${(amount / 1_000_000_000_000).toFixed(2)} Trillion`
+  if (amount >= 1_000_000_000) return `₦${(amount / 1_000_000_000).toFixed(2)} Billion`
+  if (amount >= 1_000_000) return `₦${(amount / 1_000_000).toFixed(2)} Million`
+  return formatCurrency(amount)
 }
 
-export function BudgetInsights({ budget, stateName }: BudgetInsightsProps) {
-  // Calculate insights
-  const capitalPercentage = (budget.capitalExpenditure / budget.totalBudget) * 100
-  const recurrentPercentage = (budget.recurrentExpenditure / budget.totalBudget) * 100
+export function BudgetInsights({ budget, stateName }: { budget: StateBudget; stateName: string }) {
+  const topSector = Object.entries(budget.sectorAllocations).sort(
+    ([, a], [, b]) => b - a,
+  )[0]
+  const topRevenue = Object.entries(budget.revenue).sort(([, a], [, b]) => b - a)[0]
 
-  // Find highest and lowest sector allocations
-  const sectorEntries = Object.entries(budget.sectorAllocations)
-  const highestSector = sectorEntries.reduce((prev, current) => (current[1] > prev[1] ? current : prev))
-  const lowestSector = sectorEntries.reduce((prev, current) => (current[1] < prev[1] ? current : prev))
-
-  // Calculate percentages for highest and lowest sectors
-  const highestSectorPercentage = (highestSector[1] / budget.totalBudget) * 100
-  const lowestSectorPercentage = (lowestSector[1] / budget.totalBudget) * 100
-
-  // Revenue insights
-  const revenueEntries = Object.entries(budget.revenue)
-  const highestRevenue = revenueEntries.reduce((prev, current) => (current[1] > prev[1] ? current : prev))
-  const highestRevenuePercentage = (highestRevenue[1] / budget.totalBudget) * 100
-
-  // Calculate if the budget is balanced, surplus, or deficit
-  const totalRevenue = Object.values(budget.revenue).reduce((sum, value) => sum + value, 0)
+  const totalRevenue = Object.values(budget.revenue).reduce((sum, val) => sum + val, 0)
   const budgetBalance = totalRevenue - budget.totalBudget
   const budgetStatus = budgetBalance > 0 ? "surplus" : budgetBalance < 0 ? "deficit" : "balanced"
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Budget Insights</CardTitle>
-        <CardDescription>
-          Key observations from {stateName} State's {budget.year} budget
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div>
-          <h3 className="font-semibold text-lg">Budget Overview</h3>
-          <p className="text-muted-foreground">
-            {stateName} State's total budget for {budget.year} is {formatCurrencyInWords(budget.totalBudget)}. This
-            budget{" "}
+    <div className="p-8 h-full">
+      <div className="mb-8">
+        <h3 className="text-2xl font-black uppercase tracking-tight mb-2">Budget Insights</h3>
+        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+          Key observations from {stateName} State&apos;s {budget.year} budget
+        </p>
+      </div>
+      
+      <div className="space-y-8">
+        <div className="border-l-2 border-primary pl-4">
+          <h4 className="text-xs font-bold uppercase tracking-widest text-primary mb-1">Overview</h4>
+          <p className="text-sm font-medium leading-relaxed">
+            {stateName} State&apos;s total budget for {budget.year} is {formatCurrencyInWords(budget.totalBudget)}. This budget{" "}
             {budgetStatus === "balanced"
-              ? "is balanced"
+              ? "is perfectly balanced"
               : budgetStatus === "surplus"
-                ? `has a surplus of ${formatCurrency(budgetBalance)}`
-                : `has a deficit of ${formatCurrency(Math.abs(budgetBalance))}`}
+                ? `operates with a surplus of ${formatCurrency(budgetBalance)}`
+                : `operates with a deficit of ${formatCurrency(Math.abs(budgetBalance))}`}
             .
           </p>
         </div>
 
-        <div>
-          <h3 className="font-semibold text-lg">Expenditure Distribution</h3>
-          <p className="text-muted-foreground">
-            {capitalPercentage > recurrentPercentage
-              ? `The budget prioritizes capital expenditure (${capitalPercentage.toFixed(1)}%) over recurrent expenditure (${recurrentPercentage.toFixed(1)}%).`
-              : `The budget allocates more to recurrent expenditure (${recurrentPercentage.toFixed(1)}%) than capital expenditure (${capitalPercentage.toFixed(1)}%).`}
+        <div className="border-l-2 border-border pl-4">
+          <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Expenditure Focus</h4>
+          <p className="text-sm font-medium leading-relaxed">
+            The largest single sector allocation is{" "}
+            <span className="font-bold text-foreground capitalize">{topSector[0]}</span>, receiving{" "}
+            <span className="font-bold text-foreground">{formatCurrencyInWords(topSector[1] as number)}</span>. This accounts for{" "}
+            <span className="font-bold text-foreground">
+              {(((topSector[1] as number) / budget.totalBudget) * 100).toFixed(1)}%
+            </span>{" "}
+            of the total budget.
           </p>
         </div>
 
-        <div>
-          <h3 className="font-semibold text-lg">Sector Priorities</h3>
-          <p className="text-muted-foreground">
-            The highest allocation goes to the {highestSector[0]} sector with {formatCurrencyInWords(highestSector[1])}{" "}
-            ({highestSectorPercentage.toFixed(1)}% of total budget). The lowest allocation is for the {lowestSector[0]}{" "}
-            sector with {formatCurrencyInWords(lowestSector[1])} ({lowestSectorPercentage.toFixed(1)}% of total budget).
+        <div className="border-l-2 border-border pl-4">
+          <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Revenue Dependency</h4>
+          <p className="text-sm font-medium leading-relaxed">
+            The primary source of revenue is{" "}
+            <span className="font-bold text-foreground uppercase">{topRevenue[0]}</span>, contributing{" "}
+            <span className="font-bold text-foreground">{formatCurrencyInWords(topRevenue[1] as number)}</span>. This represents{" "}
+            <span className="font-bold text-foreground">
+              {(((topRevenue[1] as number) / totalRevenue) * 100).toFixed(1)}%
+            </span>{" "}
+            of the total expected revenue.
           </p>
         </div>
-
-        <div>
-          <h3 className="font-semibold text-lg">Revenue Sources</h3>
-          <p className="text-muted-foreground">
-            The primary source of revenue is {highestRevenue[0].toUpperCase()} at{" "}
-            {formatCurrencyInWords(highestRevenue[1])} ({highestRevenuePercentage.toFixed(1)}% of total budget).
-          </p>
-        </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   )
 }
-

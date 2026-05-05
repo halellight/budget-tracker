@@ -1,0 +1,31 @@
+{
+  "name": "Benue State",
+  "code": "BENUE",
+  "capital": "Makurdi",
+  "region": "North-Central",
+  "currentGovernor": "Hyacinth Alia",
+  "population": 5.7,
+  "description": "Benue State is the Food Basket of the Nation, producing the largest quantities of yam and cassava in Nigeria. The state lies in the productive middle-belt region and has fertile agricultural lands watered by the Benue River. Makurdi is a major commercial and educational hub with several universities.",
+  "website": "https://benuestate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 285000000000,
+      "recurrentExpenditure": 162000000000,
+      "capitalExpenditure": 123000000000,
+      "sectorAllocations": {
+        "agriculture": 82000000000,
+        "education": 72000000000,
+        "infrastructure": 68000000000,
+        "health": 48000000000,
+        "security": 22000000000
+      },
+      "revenue": {
+        "igr": 18000000000,
+        "faac": 198000000000,
+        "grants": 22000000000,
+        "loans": 47000000000
+      }
+    }
+  ]
+}

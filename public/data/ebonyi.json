@@ -1,0 +1,31 @@
+{
+  "name": "Ebonyi State",
+  "code": "EBONYI",
+  "capital": "Abakaliki",
+  "region": "South-East",
+  "currentGovernor": "Francis Nwifuru",
+  "population": 3.1,
+  "description": "Ebonyi State, one of the youngest states in Nigeria created in 1996, is known as the Salt Lake State due to its significant salt deposits. Abakaliki is a growing urban centre and the state has become a major producer of rice in Nigeria. The government has invested heavily in road infrastructure and the Abakaliki urban renewal project.",
+  "website": "https://ebonyistate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 285000000000,
+      "recurrentExpenditure": 138000000000,
+      "capitalExpenditure": 147000000000,
+      "sectorAllocations": {
+        "education": 78000000000,
+        "infrastructure": 68000000000,
+        "health": 58000000000,
+        "agriculture": 42000000000,
+        "security": 12000000000
+      },
+      "revenue": {
+        "igr": 18000000000,
+        "faac": 178000000000,
+        "grants": 22000000000,
+        "loans": 67000000000
+      }
+    }
+  ]
+}

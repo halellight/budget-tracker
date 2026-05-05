@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server"
 import { getStateData } from "@/lib/api"
 
-export async function GET(request: Request, { params }: { params: { state: string } }) {
-  const state = params.state.toLowerCase()
+export async function GET(request: Request, { params }: { params: Promise<{ state: string }> }) {
+  const { state: stateParam } = await params
+  const state = stateParam.toLowerCase()
 
   try {
     const data = await getStateData(state)
@@ -12,7 +13,7 @@ export async function GET(request: Request, { params }: { params: { state: strin
     }
 
     return NextResponse.json(data)
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch state data" }, { status: 500 })
   }
 }

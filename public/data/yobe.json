@@ -1,0 +1,31 @@
+{
+  "name": "Yobe State",
+  "code": "YOBE",
+  "capital": "Damaturu",
+  "region": "North-East",
+  "currentGovernor": "Mai Mala Buni",
+  "population": 3.3,
+  "description": "Yobe State is situated in the arid north-eastern part of Nigeria, bordering Niger Republic and Chad. Despite the challenging terrain, the state has significant agricultural production including millet, sorghum, and cowpeas. Damaturu has been rebuilt after years of Boko Haram attacks and the state is on a path of recovery and development.",
+  "website": "https://yobestate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 233000000000,
+      "recurrentExpenditure": 132000000000,
+      "capitalExpenditure": 101000000000,
+      "sectorAllocations": {
+        "education": 68000000000,
+        "security": 42000000000,
+        "infrastructure": 52000000000,
+        "health": 42000000000,
+        "agriculture": 32000000000
+      },
+      "revenue": {
+        "igr": 8000000000,
+        "faac": 162000000000,
+        "grants": 40000000000,
+        "loans": 23000000000
+      }
+    }
+  ]
+}

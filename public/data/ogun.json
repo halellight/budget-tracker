@@ -1,0 +1,31 @@
+{
+  "name": "Ogun State",
+  "code": "OGUN",
+  "capital": "Abeokuta",
+  "region": "South-West",
+  "currentGovernor": "Dapo Abiodun",
+  "population": 5.9,
+  "description": "Ogun State is the gateway state of Nigeria, renowned for its large concentration of industrial estates and manufacturing plants. Bordering Lagos, it benefits enormously from proximity to Nigeria's commercial hub and has one of the highest industrial concentrations in West Africa.",
+  "website": "https://ogunstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 555000000000,
+      "recurrentExpenditure": 220000000000,
+      "capitalExpenditure": 335000000000,
+      "sectorAllocations": {
+        "infrastructure": 145000000000,
+        "education": 120000000000,
+        "health": 85000000000,
+        "agriculture": 55000000000,
+        "security": 25000000000
+      },
+      "revenue": {
+        "igr": 185000000000,
+        "faac": 210000000000,
+        "grants": 35000000000,
+        "loans": 125000000000
+      }
+    }
+  ]
+}

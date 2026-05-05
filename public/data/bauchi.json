@@ -1,0 +1,31 @@
+{
+  "name": "Bauchi State",
+  "code": "BAUCHI",
+  "capital": "Bauchi",
+  "region": "North-East",
+  "currentGovernor": "Bala Mohammed",
+  "population": 7.2,
+  "description": "Bauchi State is known as the Pearl of Tourism in Nigeria, home to Yankari Game Reserve — one of Africa's most important wildlife parks and the largest in West Africa. The state is also rich in solid minerals including gold, iron ore, and limestone. It is a transit hub between northern and central Nigeria.",
+  "website": "https://bauchistate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 328000000000,
+      "recurrentExpenditure": 165000000000,
+      "capitalExpenditure": 163000000000,
+      "sectorAllocations": {
+        "education": 98000000000,
+        "infrastructure": 82000000000,
+        "health": 68000000000,
+        "agriculture": 52000000000,
+        "security": 20000000000
+      },
+      "revenue": {
+        "igr": 20000000000,
+        "faac": 222000000000,
+        "grants": 30000000000,
+        "loans": 56000000000
+      }
+    }
+  ]
+}

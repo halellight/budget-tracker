@@ -1,26 +1,30 @@
 {
   "name": "Adamawa State",
   "code": "ADAMAWA",
-  "stateCode": 1551,
   "capital": "Yola",
   "region": "North-East",
+  "currentGovernor": "Ahmadu Umaru Fintiri",
+  "population": 4.2,
+  "description": "Adamawa State, bordering Cameroon, is named after the Fulani leader Modibo Adama who established the Emirate of Adamawa in the 19th century. The state has spectacular natural scenery including the Mandara Mountains and the Benue and Gongola rivers. Yola is a growing commercial centre and the state has significant agricultural and livestock resources.",
+  "website": "https://adamawastate.gov.ng",
   "budgets": [
     {
       "year": "2024",
-      "totalBudget": 225893690626,
-      "recurrentExpenditure": 111379586126,
-      "capitalExpenditure": 114514104500,
+      "totalBudget": 252000000000,
+      "recurrentExpenditure": 142000000000,
+      "capitalExpenditure": 110000000000,
       "sectorAllocations": {
-        "education": 15603000100,
-        "health": 6388000000,
-        "infrastructure": 25535000000,
-        "agriculture": 4505511000
+        "agriculture": 68000000000,
+        "education": 62000000000,
+        "infrastructure": 58000000000,
+        "health": 45000000000,
+        "security": 18000000000
       },
       "revenue": {
-        "igr": 22240608550,
-        "faac": 141617082076,
-        "grants": 4900000000,
-        "loans": 16000000000
+        "igr": 12000000000,
+        "faac": 175000000000,
+        "grants": 22000000000,
+        "loans": 43000000000
       }
     }
   ]

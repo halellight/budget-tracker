@@ -4,6 +4,9 @@
   "capital": "Umuahia",
   "region": "South-East",
   "currentGovernor": "Alex Otti",
+  "population": 3.7,
+  "description": "Abia State is an industrial and commercial hub in south-eastern Nigeria. Aba, the state's commercial capital, is the manufacturing centre of the south-east, producing shoes, textiles, and garments that are exported across Africa. Governor Alex Otti, a seasoned banker, is driving a reform agenda focused on industrialisation and fiscal discipline.",
+  "website": "https://abiastate.gov.ng",
   "budgets": [
     {
       "year": "2024",

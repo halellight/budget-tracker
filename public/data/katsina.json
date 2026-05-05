@@ -1,0 +1,31 @@
+{
+  "name": "Katsina State",
+  "code": "KATSINA",
+  "capital": "Katsina",
+  "region": "North-West",
+  "currentGovernor": "Dikko Radda",
+  "population": 8.7,
+  "description": "Katsina State is an ancient emirate state bordering Niger Republic and is one of the oldest centres of Islamic learning in West Africa. The state is a major agricultural producer of groundnuts, cotton, and livestock. Katsina is also working to boost its mining sector with significant deposits of gemstones and minerals.",
+  "website": "https://katsinastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 325000000000,
+      "recurrentExpenditure": 175000000000,
+      "capitalExpenditure": 150000000000,
+      "sectorAllocations": {
+        "education": 105000000000,
+        "agriculture": 68000000000,
+        "infrastructure": 78000000000,
+        "health": 52000000000,
+        "security": 18000000000
+      },
+      "revenue": {
+        "igr": 22000000000,
+        "faac": 238000000000,
+        "grants": 20000000000,
+        "loans": 45000000000
+      }
+    }
+  ]
+}

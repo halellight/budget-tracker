@@ -1,0 +1,31 @@
+{
+  "name": "Lagos State",
+  "code": "LAGOS",
+  "capital": "Ikeja",
+  "region": "South-West",
+  "currentGovernor": "Babajide Sanwo-Olu",
+  "population": 15.9,
+  "description": "Lagos is Nigeria's commercial capital and most populous state, generating the highest Internally Generated Revenue of any state. It is the economic engine of Nigeria, home to the Lagos Stock Exchange, major seaports, and over 60% of Nigeria's industrial activity.",
+  "website": "https://lagosstate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 2253892400000,
+      "recurrentExpenditure": 1003892400000,
+      "capitalExpenditure": 1250000000000,
+      "sectorAllocations": {
+        "infrastructure": 450000000000,
+        "education": 320000000000,
+        "health": 210000000000,
+        "agriculture": 68000000000,
+        "security": 55000000000
+      },
+      "revenue": {
+        "igr": 1100000000000,
+        "faac": 420000000000,
+        "grants": 85000000000,
+        "loans": 648892400000
+      }
+    }
+  ]
+}

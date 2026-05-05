@@ -1,0 +1,31 @@
+{
+  "name": "Kwara State",
+  "code": "KWARA",
+  "capital": "Ilorin",
+  "region": "North-Central",
+  "currentGovernor": "AbdulRahman AbdulRazaq",
+  "population": 3.2,
+  "description": "Kwara State is the gateway between northern and southern Nigeria. Ilorin, its capital, was once the southernmost emirate city and blends Yoruba, Hausa, and Fulani cultures seamlessly. The state has a growing technology sector and is home to several federal universities and research institutions.",
+  "website": "https://kwarastate.gov.ng",
+  "budgets": [
+    {
+      "year": "2024",
+      "totalBudget": 258000000000,
+      "recurrentExpenditure": 148000000000,
+      "capitalExpenditure": 110000000000,
+      "sectorAllocations": {
+        "education": 75000000000,
+        "infrastructure": 65000000000,
+        "health": 55000000000,
+        "agriculture": 42000000000,
+        "security": 15000000000
+      },
+      "revenue": {
+        "igr": 32000000000,
+        "faac": 175000000000,
+        "grants": 20000000000,
+        "loans": 31000000000
+      }
+    }
+  ]
+}

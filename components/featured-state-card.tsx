@@ -24,7 +24,7 @@ export function FeaturedStateCard({ state }: FeaturedStateCardProps) {
           <CardTitle>{state}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">Explore {state} State's budget allocation and economic data</p>
+          <p className="text-muted-foreground">Explore {state} State&apos;s budget allocation and economic data</p>
         </CardContent>
       </Card>
     </Link>
