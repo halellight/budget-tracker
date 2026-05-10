@@ -15,6 +15,8 @@ export function BudgetGlossary() {
           { term: "Capital Exp.", def: "Money spent on long-term physical assets like roads, schools, and hospitals." },
           { term: "Recurrent Exp.", def: "Money spent on day-to-day operations like salaries and overhead costs." },
           { term: "Deficit", def: "When a state plans to spend more money than it expects to collect in revenue." },
+          { term: "Balanced Budget", def: "When a state's total revenue (income) exactly matches its total planned expenditure. It means the state isn't spending more than it makes." },
+          { term: "Surplus", def: "When a state expects to collect more money in revenue than it plans to spend." },
         ].map(({ term, def }) => (
           <div key={term} className="border-l-2 border-border pl-4">
             <h4 className="text-xs font-bold uppercase tracking-widest text-foreground mb-1">{term}</h4>

@@ -6,6 +6,7 @@ import { formatCurrency } from "@/lib/utils"
 import { BudgetCharts } from "@/components/BudgetChart"
 import { BudgetInsights } from "@/components/budget-insights"
 import { BudgetGlossary } from "@/components/budget-glossary"
+import { StateNews } from "@/components/state-news"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 
 export async function generateStaticParams() {
@@ -139,7 +140,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             { 
               label: "Fiscal Balance", 
               value: balance > 0 ? "Surplus" : balance < 0 ? "Deficit" : "Balanced", 
-              sub: balance !== 0 ? formatCurrency(Math.abs(balance)) : "Matched",
+              sub: balance !== 0 ? formatCurrency(Math.abs(balance)) : "Income = Spending",
               textColor: balance > 0 ? "text-primary" : balance < 0 ? "text-destructive" : ""
             },
           ].map(({ label, value, sub, textColor }) => (
@@ -158,6 +159,9 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             <BudgetCharts sectorData={sectorData} revenueData={revenueData} />
           </div>
         </div>
+
+        {/* ── ACCOUNTABILITY WATCH ── */}
+        <StateNews stateName={stateData.name} />
 
         {/* ── INSIGHTS & GLOSSARY ── */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">

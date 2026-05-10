@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     title: "ngtrak. — Nigerian State Budget Tracker",
     description: "Transparent budget data for all 36 Nigerian states and FCT",
     siteName: "ngtrak.",
+    images: "/ngtrak.png"
   },
   twitter: {
     card: "summary_large_image",
@@ -53,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ngtrak<span className="text-primary">.</span>
                 </Link>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-                  Empowering Nigerians with transparent, accessible budget data for all 36 states and the FCT. 
+                  Empowering Nigerians with transparent, accessible budget data for all 36 states and the FCT.
                   Data sourced strictly from official state budget documents, open treasury, and OAGF.
                 </p>
               </div>
@@ -101,8 +102,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 © {new Date().getFullYear()} ngtrak. Data for the public.
               </p>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors">Twitter (X)</a>
-                <a href="#" className="hover:text-primary transition-colors">GitHub</a>
+                <a href="https://x/_halel" className="hover:text-primary transition-colors">Twitter (X)</a>
+                <a href="https://praiseibe.com" className="hover:text-primary transition-colors">Who is Praise?</a>
               </div>
             </div>
           </div>
